@@ -1,0 +1,23 @@
+{
+  "name": "handyfix",
+  "version": "1.0.0",
+  "description": "BrainStation Capstone Project-2019",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nicoguname/handyfix.git"
+  },
+  "author": "Nicanor Oguname",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nicoguname/handyfix/issues"
+  },
+  "homepage": "https://github.com/Nicoguname/handyfix#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
