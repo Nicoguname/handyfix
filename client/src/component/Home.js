@@ -1,6 +1,7 @@
 import React, { Component }from 'react';
 import axios from 'axios';
-import Artisan from './Artisan';
+import Artisan from './Artisan/Artisan';
+// import shortId from 'shortid';
 
 export class Home extends Component {
     state = {
@@ -26,10 +27,21 @@ export class Home extends Component {
         return (
             
             <div>
+
                 {this.state.artisanData.map(artisan => (
                     <Artisan artisanData = {artisan}/>
                     // <Artisan artisanData = {this.state.artisanData}/>
                 ))}
+                {/* {this.state.artisanData.map(artisan => (
+                    <Artisan artisanData = {artisan}/>
+                    // <Artisan artisanData = {this.state.artisanData}/>
+                ))} */}
+
+                {/* {this.state.artisanData.map((items, index) => 
+                    <Artisan
+                        artisanData={items}
+                        key={index} />)
+                } Will render as objects */} 
             
             
             </div>
