@@ -1,5 +1,8 @@
 .person {
-        margin: 16px 16px;
+        margin-top: 16px;
+        margin-right: 16px;
+        margin-left: 16px;
+        margin-bottom: 16px;
         padding-bottom: 16px;
         border-bottom: 1px solid grey;
 
@@ -9,11 +12,17 @@
         justify-content: left;
        
         &--name, &--trade, &--exp {
-            margin: 0px 8px 8px 0px;
+            margin: 0px 8px 8px 0;
+        }
+
+        &--name1, &--trade1, &--exp1 {
+            font-weight: bold;
+            margin: 0px 8px 8px 0;
         }
 
         &--rating {
-            margin-left: 16px;
+            margin-left: 8px;
+            justify-self: right;
         }
     }
    

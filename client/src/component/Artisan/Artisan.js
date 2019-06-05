@@ -12,21 +12,23 @@ export class Artisan extends Component {
         const { artisanName, trade, experience, rating } = this.props.artisanData;
 
         console.log(this.props.artisanData)
+
         return (
             <div className="person">
                 <div className="person__details">
-                <div className="person__details--name">Name:</div>
-                <div className="person__details--name1">{artisanName}</div>
+                <div className="person__details--name1">Name:</div>
+                <div className="person__details--name">{artisanName}</div>
                 {/* <div className="person__details--rating">Rating:</div> */}
                 <div className="person__details--rating">({rating} stars)</div>
+                {/* <div className="person__details--stars">{printStars({rating})}</div> */}
                 </div>
                 <div className="person__details">
-                <div className="person__details--trade">Trade:</div>
-                <div className="person__details--trade1">{trade}</div>
+                <div className="person__details--trade1">Trade:</div>
+                <div className="person__details--trade">{trade}</div>
                 </div>
                 <div className="person__details">
-                <div className="person__details--exp">Experience:</div>
-                <div className="person__details--exp1">{experience}</div>
+                <div className="person__details--exp1">Experience:</div>
+                <div className="person__details--exp">{experience}</div>
                 </div>
                 {/* <div className="person__details">
                 <div className="person__details--rating">Rating:</div>

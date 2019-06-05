@@ -1,0 +1,65 @@
+@mixin mobile {
+  @media (min-width: 120px) {
+    @content;
+  }
+}
+
+.nav {
+  @include mobile {
+    // width: 320px;
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 75px;
+    margin-left: 0px;
+    padding-top: 0.3rem;
+    background-color: #222218;
+    border: 1px solid black;
+    // position: fixed;
+
+    &__logo {
+      display: flex;
+      flex-direction: row;
+      justify-content: right;
+      align-items: top;
+
+      &--icon {
+        width: 150%;
+        height: 70px;
+
+        //    margin-left: -39px; //delete
+        object-fit: contain;
+      }
+    }
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      &--request,
+      &--review {
+        // position: relative;
+        list-style-type: none;
+        color: silver;
+        margin: 32px 16px;
+        align-items: bottom;
+      }
+
+    //   &--request:hover,
+    //   &--review:hover {
+    //     border-bottom: 2px solid #262626;
+    //   }
+
+      &__request:hover {
+        background-color: #98f7fa;
+      }
+
+      &__request:active {
+        color: #f43131;
+      }
+    }
+    //
+  }
+}
