@@ -38,14 +38,24 @@ class Jobs extends Component {
     return (
       <div className="App">
 
-        <div className="post-container">
+        <div className="job-container">
           <div>
           <div className="job">Job Request Database</div>
             {this.state.jobs.map((job, index) => (
               <div key={index}>
                 
                 <div className="job__database">
-                  <div className="job__fullname">{job.artisanName}</div>
+                  <div className="job__database--tradeid">{job.tradeid}</div>
+                  <div className="job__database--artisan">{job.artisanName}</div>
+                  <div className="job__database--trade">{job.trade}</div>
+                  <div className="job__database--city">{job.city}</div>
+                  <div className="job__database--city">{job.requestorname}</div>
+                  <div className="job__database--description">{job.description}</div>
+                  <div className="job__database--status">{job.status}</div>
+                  <div className="job__database--requestdate">{job.requestdate}</div>
+                 
+                 
+                 {/* <div className="job__fullname">{job.artisanName}</div> */}
                   {/* <div className="post__city">{comment.city}</div>
                   <div className="post__date">{comment.reviewdate}</div>
                   <div className="post__tradeid">{comment.tradeid}</div>

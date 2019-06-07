@@ -5,6 +5,7 @@ import Main from "./component/Main/Main.js";
 import Navigation from "./component/Navigation/Navigation.js";
 import Form1 from "./component/Form/Form1";
 import Form2 from "./component/Form/Form2";
+import FormHandler from './component/FormHandler/FormHandler';
 import Comments from "./component/Comment/Comments.js";
 import Jobs from './component/Jobs/Jobs.js';
 import "./App.css";
@@ -20,13 +21,19 @@ function App() {
         <Route exact path="/home" component={Home} />
         <Route exact path="/comments" component={Comments} />
         <Jobs exact path="/jobs" component={JobPage}/>
-        <Main exact path="/artisan" component={Artisan}/>
+        {/* <Main exact path="/artisan" component={Artisan}/> */}
+        <Route exact path="/artisan" 
+          render={(props) => (
+            <Main {...props}><Artisan /></Main>
+          )}
+        ></Route>
         <Route exact path="/form1" component={Form1} />
         <Route exact path="/form2" component={Form2} />
         
        
         {/* <Redirect exact to="/artisan" from="/" /> */}
         {/* <Form /> */}
+        <FormHandler exact path="/formhandler" />
         <Form1 exact path="/form1" />
         {/*<Form2 exact path="/form2" />*/}
         {/* <Comments exact path="/comments"/> */}

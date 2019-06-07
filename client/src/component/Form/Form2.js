@@ -17,13 +17,28 @@ class Form2 extends Component {
 
     this.state = {
       fullname: "",
-      city: "",
+      city: "East York",
       reviewdate: "",
     //   Date: "",
       tradeid: "",
       rating: "",
       comments: ""
     };
+  }
+
+  componentDidMount() {
+    const locationState = this.props.location.state;
+    const artisan = locationState ? locationState.artisan : null;
+    if(!artisan) {
+      // @todo: redirect to another page
+    } else {
+      const { artisanName, tradeid, rating } = artisan;
+      this.setState({
+        fullname: artisanName,
+        tradeid,
+        rating,
+      });
+    }
   }
 
   handleFullnameChange = event => {
@@ -98,15 +113,16 @@ class Form2 extends Component {
 
   render() {
   
-    // function ratingPers(num) {
-
-      // for (var i =0; i<= num; i+num) {
-      //     var rating = '*';
-      //     console.log('*');
-      //     return num += '*';
-      // }
+    function ratingPers(num) {
+      var rating ='';
+      for (var i =0; i<= num; i++) {
+           var stars = rating + '*';
+          console.log('*');
+         
+      }
+      return stars;
       
-    // }
+    }
 
     const {
       fullname,
@@ -122,22 +138,24 @@ class Form2 extends Component {
           <label>Review Service</label>
           <div>
             <label>Fullnames:</label>
+            <span>{fullname}</span>
 
-            <input
+            {/* <input
               type="text"
               value={fullname}
               onChange={this.handleFullnameChange}
-            />
+            /> */}
           </div>
           <div>
             <label>Service Id:</label>
-            <select value={tradeid} onChange={this.handleTradeChange}>
+            <span>{tradeid}</span>
+            {/* <select value={tradeid} onChange={this.handleTradeChange}>
             <option value="sel01">SEL01</option>
               <option value="spt01">SPT01</option>
               <option value="spl01">SPL01</option>
               <option value="scp01">SCP01</option>
               <option value="sam02">SAM01</option>
-            </select>
+            </select> */}
           </div>
           <div>
             <label>City:</label>
@@ -159,15 +177,16 @@ class Form2 extends Component {
             <label>Comments:</label>
             <textarea value={comments} onChange={this.handleCommentsChange} />
           </div>
-          {/* <div>
+          <div>
             <label>Rating:</label>
 
             <input
               type="text"
+              // value={rating}
               value={ratingPers(rating)}
               onChange={this.handleRatingChange}
             />
-          </div> */}
+          </div>
 
           {/* <div>
             <label>Rating:</label>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import axios from 'axios';
+import moment from 'moment';
 
 class Comments extends Component {
   state = {
@@ -19,12 +20,22 @@ class Comments extends Component {
     );
   }
 
+ 
+
 //   sortComments (comments) {
 //     return comments.sort((a, b) => { 
 //         console.log('a',a,'b', b);
 //         return new Date(a.reviewdate).getTime > new Date(b.reviewdate).getTime;
 //     });
 //   }
+
+// const moment = require(moment);
+// const sortComments = (comments) => {
+//   comments.sort((a,b) => {
+//      return (moment(a.reviewdate, 'MM-DD-YYYY').unix() - moment(b.reviewdate, 'MM-DD-YYYY').unix());
+//   });
+//   return comments;
+// }
 
   render() {
     console.log(this.state.feedback);
@@ -36,6 +47,7 @@ class Comments extends Component {
         )
     }
     return (
+      
       <div className="App">
 
         <div className="post-container">
