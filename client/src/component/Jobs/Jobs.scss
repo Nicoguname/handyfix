@@ -1,7 +1,7 @@
 // @import '../../styles/mixins.scss';
 
 .job__container {
-    background-color: #faf3eb6b;
+    background-color: #fffdfb;
     padding-bottom: 16px;
 }
 
@@ -12,7 +12,7 @@
         margin-left: 16px;
         padding: 12px 0;
         border-bottom: 1px solid grey;
-        background-color: #faf3eb6b;
+        background-color: #fffdfb;
 
         &__header {
                 // font-family: '$font-family-demi-bold';
@@ -24,7 +24,7 @@
                 border-bottom: 2px solid grey;
                 padding: 16px 0 8px 0;
                 // background-color: #f7efef;
-                background-color: #faf3eb6b;
+                background-color: #fffdfb;
             }
 
     &__database {

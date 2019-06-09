@@ -147,16 +147,10 @@ class Form1 extends Component {
     return (
        <div className="form">
       <form onSubmit={this.handleSubmit1}>
-      {/* <div className="form__border"> */}
       <div className="form__image">
         <div className="form__image--title"><label>Request Service</label></div>
         <img className="form__image--phone" src={MobilePhone} alt="mobilephone" />
         </div>
-        {/* <div> */}
-          {/* <div className="form__id">
-            <label htmlFor="request id">Request Id:</label>
-            <span>{tradeid}</span>
-          </div> */}
           <div className="form__border">
           <div className="form__name">
             <label className="form__name1" htmlFor="artisan name">Artisan Name:</label>

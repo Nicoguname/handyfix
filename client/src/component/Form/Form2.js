@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import axios from "axios";
 import Comments from '../Comment/Comments.js';
 import './Form2.scss';
-import MobilePhone from '../../Assets/Images/mobile-phone.svg';
+// import MobilePhone from '../../Assets/Images/mobile-phone.svg';
+// import Smileys from '../../Assets/Images/dreamstimemaximum_31763616.jpg';
+import Smileys from '../../Assets/Images/dreamstimemaximum_115923600.jpg';
 
 const tradeIds = [
   ''
@@ -17,7 +19,6 @@ class Form2 extends Component {
       tradeid: "",
       trade: "",
       reviewername: "",
-      // city: "East York",
       comments: "",
       rating: "",
       reviewdate: "",
@@ -63,12 +64,6 @@ class Form2 extends Component {
       reviewername: event.target.value
     });
   };
-
-  // handleCityChange = event => {
-  //   this.setState({
-  //     city: event.target.value
-  //   });
-  // };
 
   handleCommentsChange = event => {
     this.setState({
@@ -139,76 +134,149 @@ class Form2 extends Component {
       tradeid,
       trade,
       reviewername,
-      // city: "East York",
       comments,
       rating,
       reviewdate,
     } = this.state;
 
     return (
-      <div>
-        <form onSubmit={this.handleSubmit2}>
-          <label>Review Service</label>
-          <div>
-            <label htmlFor="artisan name">Artisan Name:</label>
-            <span>{artisanName}</span>
+
+      <div className="form2">
+      <form onSubmit={this.handleSubmit2}>
+      <div className="form2__image">
+        <div className="form2__image--title"><label>Review Service</label></div>
+        <img className="form2__image--flyer" src={Smileys} alt="mobilephone" />
+        </div>
+          <div className="form2__border">
+          <div className="form2__name">
+            <label className="form2__name1" htmlFor="artisan name">Artisan Name:</label>
+            <span className="form2__name2">{artisanName} ({tradeid})</span>
           </div>
-          <div>
-            <label htmlFor="service id">Service Id:</label>
-            <span>{tradeid}</span>
+          <div className="form2__service">
+            <label className="form2__service1" htmlFor="service type">Service Type:</label>
+            <span className="form2__service2">{trade}</span>
           </div>
-          <div>
-            <label htmlFor="trade">Service Type:</label>
-            <span>{trade}</span>
-          </div>
-          {/* <div>
-            <label htmlFor="city">City:</label>
-            <select value={city} onChange={this.handleCityChange}>
+          {/* <div className="form2__city">
+            <label className="form2__city1" htmlFor="city">City:</label>
+            <select className="form2__city2" value={city} onChange={this.handleCityChange}>
               <option value="east York">East York</option>
               <option value="eglinton">Eglington</option>
               <option value="kipling">Kipling</option>
             </select>
           </div> */}
 
-          <div>
-            <label htmlFor="request date">Request Date:</label>
-            <div value={reviewdate} />
+          <div className="form2__comm">
+            <label className="form2__comm1" htmlFor="comments">Comments:</label>
+            <textarea className="form2__comm2" placeholder="Please enter your comments"
+              value={comments}
+              onChange={this.handleCommentsChange}
+            />
           </div>
-          {/* <div>
-            <label htmlFor="date">Date:</label>
-            <select value={reviewdate}
-            onClick={this.handleReviewDateChange}/>
-            <input type="date" name="reviewdate"/>
-            
-            </div> */}
-          <div>
-            <label htmlFor="date">Rating:</label>
-            <select value={rating} onChange={this.handleRatingChange}>
+
+          <div className="form2__name3">
+            <label className="form2__name4" htmlFor="reviewer name">Review by:</label>
+            <input className="form2__name5"
+              type="text" placeholder="Your Name"
+              value={reviewername}
+              onChange={this.handleReviewerNameChange}
+            />
+          </div>
+
+          <div className="form2__rating">
+            <label className="form2__rating1" htmlFor="rating">Rating:</label>
+            <select className="form2__rating2" value={rating} onChange={this.handleRatingChange}>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
               <option value="5">5</option>
             </select>
-            
             </div>
-
-          <div>
-            <label htmlFor="comments">Comments:</label>
-            <textarea value={comments} onChange={this.handleCommentsChange} />
-          </div>
-          <div>
-            <label htmlFor="requestor name">Reviewer Name:</label>
-            <input
+          {/* <div className="form2__name3">
+            <label className="form2__name4" htmlFor="requestor name">Review By:</label>
+            <input className="form2__name5"
               type="text" placeholder="Your Name"
               value={reviewername}
               onChange={this.handleReviewerNameChange}
             />
+          </div> */}
+          <div className="form2__date">
+            <label className="form2__date1" htmlFor="review date">Review Date:</label>
+            <div className="form2__date2" value={reviewdate} />
           </div>
-         
-          <button value="submit">Submit</button>
-        </form>
+
+          {/* <div className="form2__status">
+            <label className="form2__status1" htmlFor="job status">Job Status:</label>
+            <select className="form2__status2" value={status} onChange={this.handleStatusChange}>
+              <option defaultvalue="in review">In review</option>
+            </select>
+          </div> */}
+       
+        <button className="form2__submit" value="submit">Submit</button>
+        
+        </div>
+      </form>
       </div>
+
+
+
+
+
+
+      // <div>
+      //   <form onSubmit={this.handleSubmit2}>
+      //     <label>Review Service</label>
+      //     <div>
+      //       <label htmlFor="artisan name">Artisan Name:</label>
+      //       <span>{artisanName}</span>
+      //     </div>
+      //     <div>
+      //       <label htmlFor="service id">Service Id:</label>
+      //       <span>{tradeid}</span>
+      //     </div>
+      //     <div>
+      //       <label htmlFor="trade">Service Type:</label>
+      //       <span>{trade}</span>
+      //     </div>
+      //     <div>
+      //       <label htmlFor="request date">Request Date:</label>
+      //       <div value={reviewdate} />
+      //     </div>
+      //     {/* <div>
+      //       <label htmlFor="date">Date:</label>
+      //       <select value={reviewdate}
+      //       onClick={this.handleReviewDateChange}/>
+      //       <input type="date" name="reviewdate"/>
+            
+      //       </div> */}
+      //     <div>
+      //       <label htmlFor="date">Rating:</label>
+      //       <select value={rating} onChange={this.handleRatingChange}>
+      //         <option value="1">1</option>
+      //         <option value="2">2</option>
+      //         <option value="3">3</option>
+      //         <option value="4">4</option>
+      //         <option value="5">5</option>
+      //       </select>
+            
+      //       </div>
+
+      //     <div>
+      //       <label htmlFor="comments">Comments:</label>
+      //       <textarea value={comments} onChange={this.handleCommentsChange} />
+      //     </div>
+      //     <div>
+      //       <label htmlFor="requestor name">Reviewer Name:</label>
+      //       <input
+      //         type="text" placeholder="Your Name"
+      //         value={reviewername}
+      //         onChange={this.handleReviewerNameChange}
+      //       />
+      //     </div>
+         
+      //     <button value="submit">Submit</button>
+      //   </form>
+      // </div>
     );
   }
 }

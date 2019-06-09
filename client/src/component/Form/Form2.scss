@@ -1,0 +1,108 @@
+.form2 {
+    margin: 0 16px;
+
+    &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 16px;
+
+        &--title {
+            font-weight: bold;
+            font-size: 2.2rem;
+            margin-left: 4px; 
+        }
+
+        &--flyer {
+            width: 25%;
+            height: 80px;
+            border-radius:50%;
+            margin-left: 16px;      
+        }
+    }
+
+    &__border {
+        border: 2px solid grey;
+        background-color: white;
+        border-radius: 5px;
+        padding: 16px 16px;
+    }
+
+        &__name1, &__service1, &__comm1, &__name4,
+            &__rating1 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-right: 12px;
+            color: #2b2626;
+        }
+
+        &__date {
+            display: none;
+        }
+
+        &__name2, &__service2 { //&__city2
+            font-size: 1.2rem;
+            font-weight: 400;
+            
+            // margin-right: 12px;
+        }
+
+        &__name5 {
+            // display: flex;
+            font-size: 1.1rem;
+            font-weight: 400;
+            // font-style: italic;
+            color: grey;
+            padding-left: 5px;
+            width: 66%;
+            height: 25px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            margin: 12px auto;
+            // align-content: center;
+        }
+
+        &__comm2 {
+            display: flex;
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: grey;
+            padding-left: 5px;
+            width: 96.7%;
+            height: 110px;
+            border: 2px solid grey;
+            border-radius: 5px;
+            margin-bottom: 16px;
+            // padding: 0 0 0 0;
+            // justify-content: center;
+            // text-align: center;
+            // text-align: justify;
+        }
+
+        &__rating2 {
+            font-size: 1rem;
+            padding: 1px;
+            width: 10%;
+            border: 1px solid grey;
+        }
+
+        &__submit {
+            font-weight: 700;
+            font-size: 1.1rem;
+            height: 30px;
+            margin-top: 16px;
+            border-radius: 5px;
+            border: 1px solid grey;
+            background-color: rgb(240, 172, 172);
+        }
+
+    &__notice {
+        margin: 32px 0px;
+    }
+}
+
+.form2__comm2 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+ }
