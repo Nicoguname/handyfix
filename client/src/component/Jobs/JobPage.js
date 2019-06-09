@@ -5,6 +5,7 @@ export class JobPage extends Component {
   render() {
     return (
         <div>
+          <div className="job__header">JOBS DATABASE</div>
       <Jobs />
       </div>
     );

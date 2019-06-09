@@ -1,9 +1,4 @@
-// @import '../../Assets/fonts/AvenirNextLTPro-Bold.otf';
-
-@import '../styles/mixins.scss';
-
-
-.person {
+.post {
     &__header {
         font-family: '$font-family-demi-bold';
         display: flex;

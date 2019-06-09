@@ -19,7 +19,7 @@ class Navigation extends Component {
            </div>
             <ul className="nav__header">
                 <Link to = "/artisan"><li className="nav__header--review">Request</li></Link>
-                <Link to = "/form2"><li className="nav__header--request">Review</li></Link>
+                <Link to = "/comments"><li className="nav__header--request">Reviews</li></Link>
             </ul>
             </div>
         );

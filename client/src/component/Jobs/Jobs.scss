@@ -1,0 +1,76 @@
+// @import '../../styles/mixins.scss';
+
+.job__container {
+    background-color: #faf3eb6b;
+    padding-bottom: 16px;
+}
+
+
+
+.job {
+        margin-right: 16px;
+        margin-left: 16px;
+        padding: 12px 0;
+        border-bottom: 1px solid grey;
+        background-color: #faf3eb6b;
+
+        &__header {
+                // font-family: '$font-family-demi-bold';
+                display: flex;
+                font-size: 1.5rem;
+                font-weight: bold;
+                // margin: 16px 0;
+                justify-content: space-around;
+                border-bottom: 2px solid grey;
+                padding: 16px 0 8px 0;
+                // background-color: #f7efef;
+                background-color: #faf3eb6b;
+            }
+
+    &__database {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        
+       
+        &--name, &--trade, &--city, &--details, &--requestor, &--status, &--date {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0px 8px 8px 0;
+        }
+
+        &--name1, &--trade1, &--city1, &--details1, &--requestor1, &--status1, &--date1 {
+            font-size: 1.2rem;
+            margin: 0px 8px 8px 0;
+        }
+        &--id {
+            font-size: 1rem;
+            margin: 1.8px 8px 8px 0;
+        }
+
+        &--rating {
+            font-size: 1.1rem;
+            // margin-left: 8px;
+            justify-self: right;
+        }
+    }
+
+    // &__profile {
+    //     font-size: 1.1rem;
+    //     font-weight: bold;
+    //     margin-bottom: 16px;
+
+    // }
+}
+
+.request {
+        display: flex;
+        justify-content: space-between;
+        margin: 0.9rem 0 0.1rem 0;
+
+        &__form1, &__form2, &__form3 {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+    
+}

@@ -5,9 +5,8 @@ import ImagePaint from "../Assets/Icons/icons8-paint-bucket-48.png";
 import ImageBrick from "../Assets/Icons/icons8-trowel-48.png";
 import ImageCarp from "../Assets/Icons/icons8-saw-48.png";
 import ImageMech from "../Assets/Icons/icons8-car-service-48.png";
-import Icon from '../../src/Assets/Icons/SVG/Icon-arrow-right.svg';
 import { Link } from 'react-router-dom';
-import Artisan from './Artisan/Artisan.js'
+import Artisan from './Artisan/Artisan.js';
 import ImageHero1 from "../Assets/Images/workgroup.jpg";
 // import ImageHero2 from "../Assets/Images/Construction-Insurance.jpg";
 import "./styles/Trade.scss";
@@ -46,9 +45,6 @@ export class Trade extends Component {
         </div> */}
         <div className="trade__image--slide">
             <img className="trade__image1" src={ImageHero1} alt="hero" />
-        </div>
-        <div className="trade__image--slide">
-            <img className="trade__icon" src={Icon} alt="icon" width="10px" height="25"/>
         </div>
 
         {/* <div className="trade__image--slide">
@@ -108,6 +104,9 @@ export class Trade extends Component {
           </div>
           </Link>
         </div>
+        <div class="trade__notice">DISCLAIMER: At HandyFix we are always committed to very high standards of service delivery. Each field technician has undergone 
+        a thorough background check for added assurance and integrity. However, while vouching for the professionalism of our workforce, we would like to remind our customers that if a real emergency arises (e.g. fire, security, medical), that they promptly contact 
+        the approprate authorities via the emergency hotlines </div> 
       </div>
     );
   }

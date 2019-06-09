@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Artisan from '../Artisan/Artisan';
+import './Form1.scss';
+import MobilePhone from '../../Assets/Images/mobile-phone.svg';
 
 const tradeIds = [
   ''
@@ -91,7 +93,7 @@ class Form1 extends Component {
       status,
     } = this.state;
 
-      var dateToday = new Date();
+      const dateToday = new Date();
       const requestdate =
         dateToday.getDate() +
         "/" +
@@ -110,21 +112,22 @@ class Form1 extends Component {
       requestdate
     };
 
-    debugger;
+    // debugger;
 
     // @todo: To validate the data.
     axios
       .post("http://localhost:8080/jobs", { job })
       .then(response => {
-        // @todo: Whatever should happen after succesfully submitting comment
-
+        // @todo: Whatever should happen after succesfully submitting a request
+        alert("Your request has been submitted. A technician will contact you shortly.");
+       
         console.log("Response from submitting job request: ", response);
-        this.props.history.push("/jobs");
+        this.props.history.push("/home");
       })
       .catch(error => {
-        // @todo: Whatever should fi there is an error submitting comment
+        // @todo: Whatever should fi there is an error submitting a request
         console.log("Error from server: ", error);
-        alert("Error submitting job request");
+        alert("There was an error submitting your job request");
       });
   };
 
@@ -142,88 +145,74 @@ class Form1 extends Component {
     } = this.state;
 
     return (
-       
+       <div className="form">
       <form onSubmit={this.handleSubmit1}>
-        <label>Request Service</label>
-        <div>
-          <div>
+      {/* <div className="form__border"> */}
+      <div className="form__image">
+        <div className="form__image--title"><label>Request Service</label></div>
+        <img className="form__image--phone" src={MobilePhone} alt="mobilephone" />
+        </div>
+        {/* <div> */}
+          {/* <div className="form__id">
             <label htmlFor="request id">Request Id:</label>
             <span>{tradeid}</span>
-            {/* <select value={tradeid} onChange={this.handleTradeIdChange}>
-              <option value="sel01">SEL01</option>
-              <option value="spt01">SPT01</option>
-              <option value="spl01">SPL01</option>
-              <option value="scp01">SCP01</option>
-              <option value="sam02">SAM01</option>
-            </select> */}
+          </div> */}
+          <div className="form__border">
+          <div className="form__name">
+            <label className="form__name1" htmlFor="artisan name">Artisan Name:</label>
+            <span className="form__name2">{artisanName} ({tradeid})</span>
           </div>
-          <div>
-            <label htmlFor="artisan name">Artisan Name:</label>
-            <span>{artisanName}</span>
-            {/* <select value={artisanName} onChange={this.handleArtisanNameChange}>
-              <option value="james may">James May</option>
-              <option value="john slate">John Slate</option>
-              <option value="sarah crane">Sarah Crane</option>
-            </select> */}
+          <div className="form__service">
+            <label className="form__service1" htmlFor="service type">Service Type:</label>
+            <span className="form__service2">{trade}</span>
           </div>
-          <div>
-            <label htmlFor="service type">Service Type:</label>
-            <span>{trade}</span>
-            {/* <select value={trade} onChange={this.handleTradeChange}>
-              <option value="electrical">Electrical</option>
-              <option value="plumbing">Plumbing</option>
-              <option value="painting">Painting</option>
-              <option value="bricklaying">Bricklaying</option>
-              <option value="carpenter">Carpenter</option>
-              <option value="automechanic">Auto Mechanic</option>
-            </select> */}
-          </div>
-          <div>
-            <label htmlFor="city">City:</label>
-            <select value={city} onChange={this.handleCityChange}>
+          <div className="form__city">
+            <label className="form__city1" htmlFor="city">City:</label>
+            <select className="form__city2" value={city} onChange={this.handleCityChange}>
               <option value="east York">East York</option>
               <option value="eglinton">Eglington</option>
               <option value="kipling">Kipling</option>
             </select>
           </div>
 
-          <div>
-            <label htmlFor="requestor name">Requestor Name:</label>
-            <input
+          <div className="form__name3">
+            <label className="form__name4" htmlFor="requestor name">Requestor Name:</label>
+            <input className="form__name5"
               type="text" placeholder="Your Name"
               value={requestorname}
               onChange={this.handleRequestorNameChange}
             />
           </div>
-          <div>
-            <label htmlFor="description">Description of problem:</label>
-            <textarea placeholder="Description of problem"
+          <div className="form__desc">
+            <label className="form__desc1" htmlFor="description">Description of problem:</label>
+            <textarea className="form__desc2" placeholder="Description of problem"
               value={description}
               onChange={this.handleDescriptionChange}
             />
           </div>
-          {/* <div>
-            <label>Request Date:</label>
-            <span value={dateNow} />
-          </div> */}
-          <div>
-            <label htmlFor="request date">Request Date:</label>
-            <div value={requestdate} />
+          <div className="form__date">
+            <label className="form__date1" htmlFor="request date">Request Date:</label>
+            <div className="form__date2" value={requestdate} />
           </div>
 
-          <div>
-            <label htmlFor="job status">Job Status:</label>
-            <select value={status} onChange={this.handleStatusChange}>
-              <option value="in review">In review</option>
+          <div className="form__status">
+            <label className="form__status1" htmlFor="job status">Job Status:</label>
+            <select className="form__status2" value={status} onChange={this.handleStatusChange}>
+              <option defaultvalue="in review">In review</option>
             </select>
           </div>
+       
+        <button className="form__submit" value="submit">Submit</button>
+        
         </div>
-        <button value="submit">Submit</button>
       </form>
+      <div class="form__notice">DISCLAIMER: At HandyFix we are always committed to very high standards of service delivery. Each field technician has undergone 
+      a thorough background check for added assurance and integrity. However, while vouching for the professionalism of our workforce, we would like to remind our customers that if a real emergency arises (e.g. fire, security, medical), that they promptly contact 
+      the approprate authorities via the emergency hotlines </div> 
+      </div>
     );
   }
 }
 
 export default Form1;
 
-//

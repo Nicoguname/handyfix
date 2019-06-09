@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {Link} from 'react-router-dom';
 import Icon from "../../../src/Assets/Icons/SVG/Icon-arrow-right.svg";
-import "../styles/Artisan.scss";
+import "./Artisan.scss";
 
 export class Artisan extends Component {
   render() {
@@ -10,30 +10,17 @@ export class Artisan extends Component {
     console.log(this.props.artisanData);
 
     return (
+        <div className="person__container">
       <div className="person">
+         {/* <div className="person__profile">PROFILE:</div> */}
         <div className="trade__image--slide">
-        {/* <Link to={{
-            pathname: '/form1',
-            state: { artisan: {
-                artisanName,
-                tradeid: id,
-                trade,
-            }}
-        }}>
-          <img
-            className="trade__icon"
-            src={Icon}
-            alt="icon"
-            width="10px"
-            height="25"
-          />
-        </Link> */}
         </div>
         <div className="person__details">
           <div className="person__details--name1">Name:</div>
           <div className="person__details--name">{artisanName}</div>
           {/* <div className="person__details--rating">Rating:</div> */}
-          <div className="person__details--rating">({rating} stars)</div>
+          <div className="person__details--rating">(Reviews: 5)</div>
+          <div className="person__details--rating">{rating}*</div>
           {/* <div className="person__details--stars">{printStars({rating})}</div> */}
         </div>
         <div className="person__details">
@@ -45,17 +32,7 @@ export class Artisan extends Component {
           <div className="person__details--exp">{experience}</div>
         </div>
         <div>
-        <Link to={{
-            pathname: '/form2',
-            state: { artisan: {
-                artisanName,
-                tradeid: id,
-                trade,
-            }}
-        }}>
-        <button>Add Review</button>
-        </Link>
-
+        <div className="request">
         <Link to={{
             pathname: '/form1',
             state: { artisan: {
@@ -64,16 +41,40 @@ export class Artisan extends Component {
                 trade,
             }}
         }}>
-        <button>Request Service</button>
+       
+        <button className="request__form1">Request Service</button>
+      
         </Link>
+
+        <Link to={{
+            pathname: '/form2',
+            state: { artisan: {
+                artisanName,
+                tradeid: id,
+                trade,
+           }}
+        }}>
+        <button className="request__form2">Add Review</button>
+        </Link>
+
+        <Link to={{
+            pathname: '/comments',
+            state: { artisanId: id }
+        }}>
+        <button className="request__form3">Show Reviews</button>
+        </Link>
+        </div>
+        
         </div>
         {/* <div className="person__details">
                 <div className="person__details--rating">Rating:</div>
                 <div className="person__details--rating1">{rating}</div> */}
         {/* </div> */}
       </div>
+      </div>
     );
   }
 }
+
 
 export default Artisan;

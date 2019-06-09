@@ -1,72 +1,60 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import axios from 'axios';
-import moment from 'moment';
+import { Link } from "react-router-dom";
+import './Comment.scss';
 
-class Comments extends Component {
-  state = {
-    comments: []
-  };
-
-  componentDidMount() {
-      console.log('start api call')
-    axios.get("http://localhost:8080/comments").then(response => {
-        console.log('data from server', response);
-        
-      this.setState({
-        comments: response.data
-      })
-    }
-    );
-  }
-
- 
-
-//   sortComments (comments) {
-//     return comments.sort((a, b) => { 
-//         console.log('a',a,'b', b);
-//         return new Date(a.reviewdate).getTime > new Date(b.reviewdate).getTime;
-//     });
-//   }
-
-// const moment = require(moment);
-// const sortComments = (comments) => {
-//   comments.sort((a,b) => {
-//      return (moment(a.reviewdate, 'MM-DD-YYYY').unix() - moment(b.reviewdate, 'MM-DD-YYYY').unix());
-//   });
-//   return comments;
-// }
+export class Comments extends Component {
 
   render() {
-    console.log(this.state.feedback);
-    if (!this.state.comments.length) {
-        return (
-            <div className="App">
-                <h2>Comment data is not available</h2>
-            </div>
-        )
-    }
+    const { artisanName, trade, comments, rating, reviewername, id, reviewdate } = this.props.comments;
+
+    console.log(this.props.comments);
+
+    // // console.log(this.state.feedback);
+    // if (!this.state.comments.length) {
+    //     return (
+    //         <div className="App">
+    //             <h2>Comment data is not available</h2>
+    //         </div>
+    //     )
+    // }
     return (
-      
+      // <>
       <div className="App">
 
-        <div className="post-container">
-          <div>
-            {this.state.comments.map((comment, index) => (
-              <div key={index}>
+        {/* <div className="post-container"> */}
+          
+          {/* <div className="post__profile">COMMENTS:</div> */}
                 <div className="post">
-                  <div className="post__fullname">{comment.fullname}</div>
-                  <div className="post__city">{comment.city}</div>
-                  <div className="post__date">{comment.reviewdate}</div>
-                  <div className="post__tradeid">{comment.tradeid}</div>
-                  <div className="post__rating">{comment.rating}</div>
-                  <div className="post__comments">{comment.comments}</div>
-                </div>
-              </div>
-            ))}
-          </div>
+                <div className="post__details">
+                  <div className="post__details--name">Artisan:</div>
+                    <div className="post__details--name1">{artisanName} </div>
+                    <div className="post__details--id">({id})</div>
+                    {/* <div className="post__id">{id}</div> */}
+                  </div>
+                  <div className="post__details">
+                    <div className="post__details--trade">Service Type:</div>
+                    <div className="post__details--trade1">{trade}</div>
+                  </div>
+                  <div className="post__details">
+                    <div className="post__details--date">Review Date:</div>
+                    <div className="post__details--date1">{reviewdate}</div>
+                  </div>
+                  <div className="post__details">
+                    <div className="post__details--comment">Comments:</div>
+                    <div className="post__details--comment1">{comments}</div>
+                  </div>
+                  <div className="post__details">
+                    <div className="post__details--rate">Rating:</div>
+                    <div className="post__details--rate1">{rating}</div>
+                  </div>
+                  <div className="post__details">
+                    <div className="post__details--reviewer">Review By:</div>
+                    <div className="post__details--reviewer1">{reviewername}</div>
+                  </div>
+               </div>
+        
         </div>
-      </div>
+        // </>
     );
   }
 }

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import axios from 'axios';
+import moment from 'moment';
+import './Jobs.scss'
 
 class Jobs extends Component {
   state = {
@@ -13,10 +15,17 @@ class Jobs extends Component {
         console.log('data from server', response);
         
       this.setState({
-        jobs: response.data
+        jobs: this.sortJobs(response.data)
       })
     }
     );
+  }
+
+  sortJobs(jobs) {
+    jobs.sort((a,b) => {
+       return (moment(b.requestdate, 'MM-DD-YYYY').unix() - moment(a.requestdate, 'MM-DD-YYYY').unix());
+    });
+    return jobs;
   }
 
 //   sortComments (comments) {
@@ -38,33 +47,47 @@ class Jobs extends Component {
     return (
       <div className="App">
 
-        <div className="job-container">
-          <div>
-          <div className="job">Job Request Database</div>
+        <div className="job__container">
+          {/* <div> */}
+          <div className="job__header">Job Request Database</div>
             {this.state.jobs.map((job, index) => (
               <div key={index}>
+              <div className="job">
                 
                 <div className="job__database">
-                  <div className="job__database--tradeid">{job.tradeid}</div>
-                  <div className="job__database--artisan">{job.artisanName}</div>
-                  <div className="job__database--trade">{job.trade}</div>
-                  <div className="job__database--city">{job.city}</div>
-                  <div className="job__database--city">{job.requestorname}</div>
-                  <div className="job__database--description">{job.description}</div>
-                  <div className="job__database--status">{job.status}</div>
-                  <div className="job__database--requestdate">{job.requestdate}</div>
-                 
-                 
-                 {/* <div className="job__fullname">{job.artisanName}</div> */}
-                  {/* <div className="post__city">{comment.city}</div>
-                  <div className="post__date">{comment.reviewdate}</div>
-                  <div className="post__tradeid">{comment.tradeid}</div>
-                  <div className="post__rating">{comment.rating}</div>
-                  <div className="post__comments">{comment.comments}</div> */}
-                </div>
+                <div className="job__database--name">Artisan Name:</div>
+                  <div className="job__database--name1">{job.artisanName}</div>
+                  <div className="job__database--id">({job.tradeid})</div>
+                  </div>
+                  <div className="job__database">
+                  <div className="job__database--trade">Service Type:</div>
+                  <div className="job__database--trade1">{job.trade}</div>
+                  </div>
+                  <div className="job__database">
+                  <div className="job__database--city">City:</div>
+                  <div className="job__database--city1">{job.city}</div>
+                  </div>
+                  <div className="job__database">
+                  <div className="job__database--details">Job Details:</div>
+                  <div className="job__database--details1">{job.description}</div>
+                  </div>
+                  <div className="job__database">
+                   <div className="job__database--status">Status:</div>
+                  <div className="job__database--status1">{job.status}</div>
+                  </div>
+                  <div className="job__database">
+                  <div className="job__database--requestor">Requestor:</div>
+                  <div className="job__database--requestor1">{job.requestorname}</div>
+                  </div>
+                  <div className="job__database">
+                  <div className="job__database--date">Request Date:</div>
+                  <div className="job__database--date1">{job.requestdate}</div>
+                  </div>
+                {/* </div> */}
+              </div>
               </div>
             ))}
-          </div>
+          {/* </div> */}
         </div>
       </div>
     );

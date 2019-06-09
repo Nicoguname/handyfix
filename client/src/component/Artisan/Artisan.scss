@@ -1,0 +1,59 @@
+.person__container {
+    background-color: #faf3eb6b;
+}
+
+.person {
+    // font-family:
+        margin-right: 16px;
+        margin-left: 16px;
+        padding: 16px 0 8px 0;
+        border-bottom: 1px solid grey;
+        
+
+        
+
+    &__details {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+       
+       
+        &--name, &--trade, &--exp {
+            font-size: 1.3rem;
+            margin: 0px 8px 8px 0;
+        }
+
+        &--name1, &--trade1, &--exp1 {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 0px 8px 8px 0;
+        }
+
+        &--rating {
+            font-size: 1.2rem;
+            margin: 0 0.1rem 0 1rem;
+            justify-self: right;
+        }
+    }
+
+    // &__profile {
+    //     font-size: 1.1rem;
+    //     font-weight: bold;
+    //     margin-bottom: 16px;
+
+    // }
+}
+
+.request {
+        display: flex;
+        justify-content: space-between;
+        // margin: 0.2rem 0rem;
+
+        &__form1, &__form2, &__form3 {
+            font-size: 1rem;
+            background-color: #ebe5e1;
+            height: 25px;
+            border-radius: 5px;
+        }
+    
+}

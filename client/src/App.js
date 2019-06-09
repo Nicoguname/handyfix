@@ -11,6 +11,8 @@ import Jobs from './component/Jobs/Jobs.js';
 import "./App.css";
 import Artisan from "./component/Artisan/Artisan.js";
 import JobPage from "./component/Jobs/JobPage.js";
+import CommentData from "./component/Comment/CommentData.js";
+// import CommentDisplay from "./component/Comment/CommentDisplay.js";
 
 function App() {
   return (
@@ -19,14 +21,20 @@ function App() {
       <Navigation />
       <Switch>
         <Route exact path="/home" component={Home} />
-        <Route exact path="/comments" component={Comments} />
+        {/* <Route exact path="/comments" component={Comments} /> */}
+        {/* <Route exact path="/comments" component={CommentData} /> */}
         <Jobs exact path="/jobs" component={JobPage}/>
-        {/* <Main exact path="/artisan" component={Artisan}/> */}
         <Route exact path="/artisan" 
           render={(props) => (
             <Main {...props}><Artisan /></Main>
+          )}>
+          </Route>
+        <Route exact path="/comments" 
+          render={(props) => (
+            <CommentData {...props}><Comments /></CommentData>
           )}
         ></Route>
+       
         <Route exact path="/form1" component={Form1} />
         <Route exact path="/form2" component={Form2} />
         

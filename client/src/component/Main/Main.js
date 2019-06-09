@@ -1,6 +1,7 @@
 import React, { Component }from 'react';
 import axios from 'axios';
-import Artisan from '../Artisan/Artisan';
+import Artisan from '../Artisan/Artisan.js';
+import './Main.scss';
 // import shortId from 'shortid';
 
 export class Main extends Component {
@@ -30,12 +31,6 @@ export class Main extends Component {
             }
         }
         );
-
-       
-
-
-
-        
     }
 
     render () {
@@ -47,23 +42,11 @@ export class Main extends Component {
         return (
             
             <div>
-
+                <div className="person__header">PROFILES</div>
                 {this.state.artisanData.map(artisan => (
                     <Artisan artisanData = {artisan}/>
-                    // <Artisan artisanData = {this.state.artisanData}/>
+                   
                 ))}
-                {/* {this.state.artisanData.map(artisan => (
-                    <Artisan artisanData = {artisan}/>
-                    // <Artisan artisanData = {this.state.artisanData}/>
-                ))} */}
-
-                {/* {this.state.artisanData.map((items, index) => 
-                    <Artisan
-                        artisanData={items}
-                        key={index} />)
-                } Will render as objects */} 
-            
-            
             </div>
         )
     }
