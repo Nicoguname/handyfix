@@ -1,5 +1,3 @@
-// const accountSid = 'AC106fc12af7bcae7a333f03805cb55906';
-// const authToken = 'cf51831e8a217f0aaee0f6e5e4798411';
 require('dotenv').config();
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
