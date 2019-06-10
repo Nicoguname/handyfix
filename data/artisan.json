@@ -1,10 +1,67 @@
 
  [
         {
-            "id": "E01",
+            "id": "SEL01",
             "artisanName": "James May",
-            "trade": "Electrician",
-            "experience": "Certiified electrician with over 15 years practical experience. Your satisfaction and safety is my top priority.",
-            "rating": 4
+            "trade": "Electrical",
+            "experience": "Certified electrician with over 15 years practical experience. Your satisfaction and safety is my top priority.",
+            "rating": 4,
+            "date": "10/02/2018"
+        },
+        {
+            "id": "SEL02",
+            "artisanName": "Clara Fayette",
+            "trade": "Electrical",
+            "experience": "Certified electrician with over 13 years practical experience. If you value excellence, then look no further.",
+            "rating": 5,
+            "date": "03/19/2019"
+        },
+        {
+            "id": "SPT01",
+            "artisanName": "Sarah Crane",
+            "trade": "Painting",
+            "experience": "Certified and artistic painter with over 10 years practical experience. I aim to bring colour to your life and living space.",
+            "rating": 4,
+            "date": "01/23/2019"
+        },
+        {
+            "id": "SPL02",
+            "artisanName": "Andrew Keeles",
+            "trade": "Plumbing",
+            "experience": "Certified plumber with over 18 years practical experience. Your utmost satisfaction is guaranteed.",
+            "rating": 3,
+            "date": "09/18/2018"
+        },
+        {
+            "id": "SPT01",
+            "artisanName": "Drew Bond",
+            "trade": "Painting",
+            "experience": "Certified painter with over 15 years practical experience. Aiming to add colour to your life",
+            "rating": 5,
+            "date": "08/30/2018"
+        },
+        {
+            "id": "SPL02",
+            "artisanName": "Sia Pandell",
+            "trade": "Plumbing",
+            "experience": "Certified plumber with 12 years practical experience. My specialty cuts across home/residential and industrial plumbing.",
+            "rating": 4,
+            "date": "02/27/2019"
+        },
+        {
+            "id": "SCP01",
+            "artisanName": "John French",
+            "trade": "Carpentry",
+            "experience": "Certified carpenter with over 16 years practical experience. Woodwork is my thing. Adding my creativity to your home",
+            "rating": 4,
+            "date": "05/14/2018"
+        },
+        {
+            "id": "SCP02",
+            "artisanName": "Kathy Howard",
+            "trade": "Carpenter",
+            "experience": "Certified carpenter with over 12 years practical experience. Hdlping you to realise your artistic dreams.",
+            "rating": 5,
+            "date": "11/08/2018"
         }
     ]

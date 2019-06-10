@@ -1,0 +1,59 @@
+process.env.TWILIO_ACCOUNT_SID="AC106fc12af7bcae7a333f03805cb55906"
+process.env.TWILIO_AUTH_TOKEN="cf51831e8a217f0aaee0f6e5e4798411"
+process.env.TWILIO_PHONE_NUMBER="+15878031118"
+const client = require('twilio')(process.env.TWILIO_ACCOUT_SID,process.env.TWILIO_AUTH_TOKEN);
+
+const { Router } = require('express');
+const jobs = require('../data/job');
+const router = Router();
+
+// "id": "SCP01",
+// "artisanName": "John French",
+// "trade": "Carpentry",
+// "city": "Eglington",
+// "description": "Damaged dining chair.",
+// "status": "Ongoing",
+// "requestdate": "05/14/2018"
+
+const url = `http://localhost:8080`;
+
+const getAllJobs = (req, res) => {
+    res.json(jobs.map(({...requestdate}) => ({
+        ...requestdate,
+        link: `{url}/jobs/${jobs.tradeid}`
+    })
+    ));
+}
+
+const createJob = (req, res) => {
+    const { job } = req.body;
+    console.log('====**', job);
+
+    jobs.push(job);
+
+    client.messages
+    .create({
+      from: process.env.TWILIO_PHONE_NUMBER,
+      to: "+16476574618",
+      body: job.description + ": " + job.city + ": " + job.requestorname
+    })
+    .then(() => {
+    //   res.send(JSON.stringify({ success: true }));
+    console.log('Message Sent')
+    })
+    .catch(err => {
+      console.log(err);
+    //   res.send(JSON.stringify({ success: false }));
+    });
+
+    console.log('====>', jobs);
+    return res.status(201).json({
+        success: true,
+        job,
+    });
+}
+
+router.get('/',getAllJobs);
+router.post('/', createJob);
+
+module.exports = router;

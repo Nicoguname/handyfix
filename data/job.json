@@ -1,0 +1,83 @@
+
+ [
+    {
+        "tradeid": "SEL01",
+        "artisanName": "James May",
+        "trade": "Electrician",
+        "requestorname": "Ali Farouk",
+        "city": "East York",
+        "description": "Damaged underground cable.",
+        "status": "Ongoing",
+        "requestdate": "05/01/2018"
+    },
+    {
+        "tradeid": "SEL01",
+        "artisanName": "Clara Fayette",
+        "trade": "Electrician",
+        "requestorname": "Kushner Misha",
+        "city": "Kipling",
+        "description": "Power outage.",
+        "status": "Completed",
+        "requestdate": "23/05/2019"
+    },
+    {
+        "tradeid": "SPT01",
+        "artisanName": "Sarah Crane",
+        "trade": "Painter",
+        "requestorname": "Linda Joseph",
+        "city": "Eglington",
+        "description": "Paint garden tools storage shed.",
+        "status": "Ongoing",
+        "requestdate": "21/07/2019"
+    },
+    {
+        "tradeid": "SPL01",
+        "artisanName": "Andrew Keeles",
+        "trade": "Plumbing",
+        "requestorname": "Jeremy Chardy",
+        "city": "East York",
+        "description": "Leaking kitchen sink.",
+        "status": "In review",
+        "requestdate": "28/02/2018"
+    },
+    {
+        "tradeid": "SPT01",
+        "artisanName": "Drew Bond",
+        "trade": "Painting",
+        "requestorname": "Don King",
+        "city": "Kipling",
+        "description": "Paint basement.",
+        "status": "Ongoing",
+        "requestdate": "30/08/2018"
+    },
+    {
+        "tradeid": "SPL01",
+        "artisanName": "Sia Pandell",
+        "trade": "Plumbing",
+        "requestorname": "Elizabeth Beastley",
+        "city": "East York",
+        "description": "Damaged underground pipe.",
+        "status": "Completed",
+        "requestdate": "16/06/2019"
+    },
+    {
+        "tradeid": "SCP01",
+        "artisanName": "John French",
+        "trade": "Carpentry",
+        "requestorname": "Erik Kristensson",
+        "city": "Eglington",
+        "description": "Damaged dining chair.",
+        "status": "Ongoing",
+        "requestdate": "14/05/2018"
+    },
+    {
+        "tradeid": "SCP01",
+        "artisanName": "Kathy Howard",
+        "trade": "Carpenter",
+        "requestorname": "Oreva Oguname",
+        "city": "Kipling",
+        "description": "Roof leaks during rainfall.",
+        "status": "In review",
+        "requestdate": "13/01/2018"
+    }
+]
