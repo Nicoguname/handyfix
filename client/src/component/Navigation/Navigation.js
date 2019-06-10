@@ -18,7 +18,7 @@ class Navigation extends Component {
            <img src={name} alt="name" className="nav__logo--name" ></img> */}
            </div>
             <ul className="nav__header">
-                <Link to = "/artisan"><li className="nav__header--review">Request</li></Link>
+                <Link to = "/artisan"><li className="nav__header--profile">Profiles</li></Link>
                 <Link to = "/comments"><li className="nav__header--request">Reviews</li></Link>
             </ul>
             </div>

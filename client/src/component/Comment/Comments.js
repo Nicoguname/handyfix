@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import './Comment.scss';
 
 export class Comments extends Component {
@@ -7,29 +6,17 @@ export class Comments extends Component {
   render() {
     const { artisanName, trade, comments, rating, reviewername, id, reviewdate } = this.props.comments;
 
-    console.log(this.props.comments);
+    // console.log(this.props.comments);
 
-    // // console.log(this.state.feedback);
-    // if (!this.state.comments.length) {
-    //     return (
-    //         <div className="App">
-    //             <h2>Comment data is not available</h2>
-    //         </div>
-    //     )
-    // }
     return (
-      // <>
+  
       <div className="App">
 
-        {/* <div className="post-container"> */}
-          
-          {/* <div className="post__profile">COMMENTS:</div> */}
                 <div className="post">
                 <div className="post__details">
                   <div className="post__details--name">Artisan:</div>
                     <div className="post__details--name1">{artisanName} </div>
                     <div className="post__details--id">({id})</div>
-                    {/* <div className="post__id">{id}</div> */}
                   </div>
                   <div className="post__details">
                     <div className="post__details--trade">Service Type:</div>
@@ -52,9 +39,7 @@ export class Comments extends Component {
                     <div className="post__details--reviewer1">{reviewername}</div>
                   </div>
                </div>
-        
         </div>
-        // </>
     );
   }
 }

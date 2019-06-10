@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Artisan from '../Artisan/Artisan';
 import './Form1.scss';
+import { Link } from 'react-router-dom';
+import Iconback from '../../Assets/Icons/SVG/Icon-back-arrow.svg';
 import MobilePhone from '../../Assets/Images/mobile-phone.svg';
 
-const tradeIds = [
-  ''
-]
+// const tradeIds = [
+//   ''
+// ]
 
 class Form1 extends Component {
   constructor(props) {
@@ -148,7 +149,13 @@ class Form1 extends Component {
        <div className="form">
       <form onSubmit={this.handleSubmit1}>
       <div className="form__image">
+      <Link to="/artisan">
+        <div className="form__image--icon">
+          <img src={Iconback} alt="back-arrow" />
+        </div>
+        </Link>
         <div className="form__image--title"><label>Request Service</label></div>
+       
         <img className="form__image--phone" src={MobilePhone} alt="mobilephone" />
         </div>
           <div className="form__border">
@@ -163,7 +170,7 @@ class Form1 extends Component {
           <div className="form__city">
             <label className="form__city1" htmlFor="city">City:</label>
             <select className="form__city2" value={city} onChange={this.handleCityChange}>
-              <option value="east York">East York</option>
+              <option defaultvalue="east York">East York</option>
               <option value="eglinton">Eglington</option>
               <option value="kipling">Kipling</option>
             </select>

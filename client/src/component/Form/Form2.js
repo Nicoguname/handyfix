@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Comments from '../Comment/Comments.js';
+import Iconback from '../../Assets/Icons/SVG/Icon-back-arrow.svg';
+import { Link } from 'react-router-dom';
 import './Form2.scss';
 // import MobilePhone from '../../Assets/Images/mobile-phone.svg';
 // import Smileys from '../../Assets/Images/dreamstimemaximum_31763616.jpg';
 import Smileys from '../../Assets/Images/dreamstimemaximum_115923600.jpg';
 
-const tradeIds = [
-  ''
-]
+// const tradeIds = [
+//   ''
+// ]
 
 class Form2 extends Component {
   constructor(props) {
@@ -22,7 +23,6 @@ class Form2 extends Component {
       comments: "",
       rating: "",
       reviewdate: "",
-      tradeid: "",
     };
   }
 
@@ -144,6 +144,11 @@ class Form2 extends Component {
       <div className="form2">
       <form onSubmit={this.handleSubmit2}>
       <div className="form2__image">
+      <Link to="/artisan">
+      <div className="form__image--icon">
+      <img src={Iconback} alt="back-arrow" />
+      </div>
+      </Link>
         <div className="form2__image--title"><label>Review Service</label></div>
         <img className="form2__image--flyer" src={Smileys} alt="mobilephone" />
         </div>
@@ -217,66 +222,6 @@ class Form2 extends Component {
         </div>
       </form>
       </div>
-
-
-
-
-
-
-      // <div>
-      //   <form onSubmit={this.handleSubmit2}>
-      //     <label>Review Service</label>
-      //     <div>
-      //       <label htmlFor="artisan name">Artisan Name:</label>
-      //       <span>{artisanName}</span>
-      //     </div>
-      //     <div>
-      //       <label htmlFor="service id">Service Id:</label>
-      //       <span>{tradeid}</span>
-      //     </div>
-      //     <div>
-      //       <label htmlFor="trade">Service Type:</label>
-      //       <span>{trade}</span>
-      //     </div>
-      //     <div>
-      //       <label htmlFor="request date">Request Date:</label>
-      //       <div value={reviewdate} />
-      //     </div>
-      //     {/* <div>
-      //       <label htmlFor="date">Date:</label>
-      //       <select value={reviewdate}
-      //       onClick={this.handleReviewDateChange}/>
-      //       <input type="date" name="reviewdate"/>
-            
-      //       </div> */}
-      //     <div>
-      //       <label htmlFor="date">Rating:</label>
-      //       <select value={rating} onChange={this.handleRatingChange}>
-      //         <option value="1">1</option>
-      //         <option value="2">2</option>
-      //         <option value="3">3</option>
-      //         <option value="4">4</option>
-      //         <option value="5">5</option>
-      //       </select>
-            
-      //       </div>
-
-      //     <div>
-      //       <label htmlFor="comments">Comments:</label>
-      //       <textarea value={comments} onChange={this.handleCommentsChange} />
-      //     </div>
-      //     <div>
-      //       <label htmlFor="requestor name">Reviewer Name:</label>
-      //       <input
-      //         type="text" placeholder="Your Name"
-      //         value={reviewername}
-      //         onChange={this.handleReviewerNameChange}
-      //       />
-      //     </div>
-         
-      //     <button value="submit">Submit</button>
-      //   </form>
-      // </div>
     );
   }
 }

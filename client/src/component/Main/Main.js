@@ -1,5 +1,7 @@
 import React, { Component }from 'react';
 import axios from 'axios';
+import Iconback from '../../Assets/Icons/SVG/Icon-back-arrow.svg';
+import { Link } from 'react-router-dom';
 import Artisan from '../Artisan/Artisan.js';
 import './Main.scss';
 // import shortId from 'shortid';
@@ -15,7 +17,7 @@ export class Main extends Component {
         const urlParams = new URLSearchParams(window.location.search);
         const jobFilter = urlParams.get('type');
 
-        console.log('Looking for this type of job: ', jobFilter);
+        // console.log('Looking for this type of job: ', jobFilter);
 
 
         axios.get("http://localhost:8080/artisan")
@@ -42,7 +44,14 @@ export class Main extends Component {
         return (
             
             <div>
-                <div className="person__header">PROFILES</div>
+                <div className="person__header">
+               <Link to="/home"> 
+                    <div className="person__header--icon">
+                        <img  src={Iconback} alt="backarrow" />
+                    </div>
+               </Link>
+                <div className="person__header--profile">PROFILES</div>
+                </div>
                 {this.state.artisanData.map(artisan => (
                     <Artisan artisanData = {artisan}/>
                    

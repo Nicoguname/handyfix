@@ -1,14 +1,24 @@
-.post {
-    &__header {
-        font-family: '$font-family-demi-bold';
-        display: flex;
-        font-size: 1.5rem;
-        font-weight: bold;
-        // margin: 16px 0;
-        justify-content: space-around;
-        border-bottom: 2px solid grey;
-        padding: 16px 0 8px 0;
-        // background-color: #f7efef;
-        background-color: #fffdfb;
+// @import '../../Assets/fonts/AvenirNextLTPro-Bold.otf';
+
+.review {
+  background-color: #fffdfb;
+
+  &__header {
+    display: flex;
+    border-bottom: 2px solid grey;
+    padding: 16px 0 8px 0;
+   
+    &--icon {
+        margin-right: 7.5rem;
+        margin-left: 16px;
     }
+
+    &--profile {
+      font-family: "$font-family-demi-bold";
+      display: flex;
+      font-size: 1.5rem;
+      font-weight: bold;
+     
+    }
+  }
 }

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import axios from 'axios';
 import moment from 'moment';
 import './Jobs.scss'
@@ -23,17 +22,10 @@ class Jobs extends Component {
 
   sortJobs(jobs) {
     jobs.sort((a,b) => {
-       return (moment(b.requestdate, 'MM-DD-YYYY').unix() - moment(a.requestdate, 'MM-DD-YYYY').unix());
+       return (moment(b.requestdate, 'DD-MM-YYYY').unix() - moment(a.requestdate, 'DD-MM-YYYY').unix());
     });
     return jobs;
   }
-
-//   sortComments (comments) {
-//     return comments.sort((a, b) => { 
-//         console.log('a',a,'b', b);
-//         return new Date(a.reviewdate).getTime > new Date(b.reviewdate).getTime;
-//     });
-//   }
 
   render() {
     console.log(this.state.jobs);
@@ -48,7 +40,6 @@ class Jobs extends Component {
       <div className="App">
 
         <div className="job__container">
-          {/* <div> */}
           <div className="job__header">Job Request Database</div>
             {this.state.jobs.map((job, index) => (
               <div key={index}>
@@ -83,11 +74,9 @@ class Jobs extends Component {
                   <div className="job__database--date">Request Date:</div>
                   <div className="job__database--date1">{job.requestdate}</div>
                   </div>
-                {/* </div> */}
               </div>
               </div>
             ))}
-          {/* </div> */}
         </div>
       </div>
     );

@@ -38,28 +38,38 @@
       flex-direction: row;
       justify-content: space-evenly;
 
-      &--request,
-      &--review {
+      &--profile, &--request {
         // position: relative;
         list-style-type: none;
         color: silver;
-        margin: 32px 16px;
+        margin: 32px 12px;
         align-items: bottom;
       }
+
+      // &--request {
+      //   // position: relative;
+      //   list-style-type: none;
+      //   color: silver;
+      //   margin: 32px 16px;
+      //   align-items: bottom;
+      // }
 
     //   &--request:hover,
     //   &--review:hover {
     //     border-bottom: 2px solid #262626;
-    //   }
-
-      &__request:hover {
-        background-color: #98f7fa;
-      }
-
-      &__request:active {
-        color: #f43131;
-      }
+    //   
     }
     //
   }
+}
+
+
+li:hover {
+  background-color: #456463;
+}
+
+li .nav__header--profile:active {
+  // text-decoration-line: underline; 
+  border-bottom: 2px solid red;
+  
 }

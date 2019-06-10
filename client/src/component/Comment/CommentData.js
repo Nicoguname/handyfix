@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import axios from "axios";
 import moment from 'moment';
 import Comments from "../Comment/Comments.js";
+import Iconback from '../../Assets/Icons/SVG/Icon-back-arrow.svg';
+import { Link } from 'react-router-dom';
 import './CommentData.scss';
 
 class CommentData extends Component {
@@ -22,7 +23,7 @@ class CommentData extends Component {
 
     axios.get("http://localhost:8080/comments").then(response => {
       if (artisanId) {
-        const artisanComments = response.data.filter(
+        const artisanComments = response.data.filter (
           comment => comment.id.toLowerCase() === artisanId.toLowerCase()
         );
         this.setState({
@@ -36,25 +37,30 @@ class CommentData extends Component {
 
   sortComments(comments) {
     comments.sort((a,b) => {
-       return (moment(b.reviewdate, 'MM-DD-YYYY').unix() - moment(a.reviewdate, 'MM-DD-YYYY').unix());
+       return (moment(b.reviewdate, 'DD-MM-YYYY').unix() - moment(a.reviewdate, 'DD-MM-YYYY').unix());
     });
     return comments;
   }
 
   render() {
-    console.log(this.state.comments);
+    // console.log(this.state.comments);
 
     return (
-      <div className="App">
-        <div className="post-container">
-          <div className="post__header">REVIEWS</div>
+      <div>
+         <div className="review__header">
+               <Link to="/artisan"> 
+                    <div className="review__header--icon">
+                        <img  src={Iconback} alt="backarrow" />
+                    </div>
+               </Link>
+                <div className="review__header--profile">REVIEWS</div>
+                </div>
 
           {this.state.comments.map(comment => (
             <Comments comments={comment} />
           ))}
 
         </div>
-      </div>
     );
   }
 }

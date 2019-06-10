@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {Link} from 'react-router-dom';
-import Icon from "../../../src/Assets/Icons/SVG/Icon-arrow-right.svg";
 import "./Artisan.scss";
 
 export class Artisan extends Component {

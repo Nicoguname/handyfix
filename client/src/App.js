@@ -39,7 +39,7 @@ function App() {
         <Route exact path="/form2" component={Form2} />
         
        
-        {/* <Redirect exact to="/artisan" from="/" /> */}
+        <Redirect exact to="/home" from="/" />
         {/* <Form /> */}
         <FormHandler exact path="/formhandler" />
         <Form1 exact path="/form1" />
