@@ -20,11 +20,19 @@ export class Trade extends Component {
         <div className="trade__icon--1">
             <img src={ImageElect} alt="elect" className="trade__icon--img"/>
             <div className="trade__icon--1--middle">
-            <NavLink to="/artisan?type=electrical" activeClassName="navelect">   <div className="trade__icon--1--text">Electrical</div>
+            <NavLink to="/artisan?type=electrical" activeClassName="navelect"><div className="trade__icon--1--text">Electrical</div>
             </NavLink>
               </div>
           </div> 
-        <NavLink to="/artisan?type=plumbing" activeClassName="navplum">  <div className="trade__icon--2">
+          {/* <div>
+            <div className="trade__icon--1--middle">
+            <NavLink to="/artisan?type=electrical" activeClassName="navelect"><div className="tooltip"><img src={ImageElect} alt="elect" className="trade__icon--img"/>
+            <div className="trade__icon--1--text">Electrical</div>
+            </div>
+            </NavLink>
+              </div>
+          </div>  */}
+        <NavLink to="/artisan?type=plumbing" activeClassName="navplum"><div className="trade__icon--2">
             <img src={ImagePlumb} alt="plumb" />
             <div className="trade__icon--2--middle">
           <div className="trade__icon--2--text">Plumbing</div>

@@ -16,8 +16,6 @@ export class Artisan extends Component {
         <div className="person__details">
           <div className="person__details--name1">Name:</div>
           <div className="person__details--name">{artisanName}</div>
-      
-         
         </div>
         <div className="person__details">
           <div className="person__details--trade1">Trade:</div>
