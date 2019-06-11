@@ -85,7 +85,6 @@ class Form2 extends Component {
       trade,
       reviewername,
       rating,
-      // city: "East York",
       comments,
     } = this.state;
 
@@ -103,25 +102,19 @@ class Form2 extends Component {
       trade,
       reviewername,
       rating,
-      // city: "East York",
       comments,
       reviewdate,
     };
 
-    // debugger;
-
-    // @todo: To validate the data.
     axios
       .post("http://localhost:8080/comments", { comment })
       .then(response => {
-        // @todo: Whatever should happen after succesfully submitting comment
         alert("Thank you for the feedback. We value your patronage.");
 
         console.log("Response from submitting job request: ", response);
         this.props.history.push("/artisan");
       })
       .catch(error => {
-        // if there is an error submitting comment
         console.log("Error from server: ", error);
         alert("There was an error submitting your review.");
       });
@@ -162,14 +155,6 @@ class Form2 extends Component {
             <label className="form2__service1" htmlFor="service type">Service Type:</label>
             <span className="form2__service2">{trade}</span>
           </div>
-          {/* <div className="form2__city">
-            <label className="form2__city1" htmlFor="city">City:</label>
-            <select className="form2__city2" value={city} onChange={this.handleCityChange}>
-              <option value="east York">East York</option>
-              <option value="eglinton">Eglington</option>
-              <option value="kipling">Kipling</option>
-            </select>
-          </div> */}
 
           <div className="form2__comm">
             <label className="form2__comm1" htmlFor="comments">Comments:</label>
@@ -178,8 +163,6 @@ class Form2 extends Component {
               onChange={this.handleCommentsChange}
             />
           </div>
-
-          
 
           <div className="form2__rating">
             <label className="form2__rating1" htmlFor="rating">Rating:</label>
@@ -201,28 +184,11 @@ class Form2 extends Component {
               onChange={this.handleReviewerNameChange}
             />
           </div>
-          {/* <div className="form2__name3">
-            <label className="form2__name4" htmlFor="requestor name">Review By:</label>
-            <input className="form2__name5"
-              type="text" placeholder="Your Name"
-              value={reviewername}
-              onChange={this.handleReviewerNameChange}
-            />
-          </div> */}
           <div className="form2__date">
             <label className="form2__date1" htmlFor="review date">Review Date:</label>
             <div className="form2__date2" value={reviewdate} />
           </div>
-
-          {/* <div className="form2__status">
-            <label className="form2__status1" htmlFor="job status">Job Status:</label>
-            <select className="form2__status2" value={status} onChange={this.handleStatusChange}>
-              <option defaultvalue="in review">In review</option>
-            </select>
-          </div> */}
-       
         <button className="form2__submit" value="submit">Submit</button>
-        
         </div>
       </form>
       </div>

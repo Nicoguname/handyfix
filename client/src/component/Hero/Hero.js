@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import ImageHero1 from "../Assets/Images/workgroup.jpg";
-import './styles/Hero.scss';
+import ImageHero1 from "../../Assets/Images/workgroup.jpg";
+import './Hero.scss';
 
 export class Hero extends Component {
   render() {

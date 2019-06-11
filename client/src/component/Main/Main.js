@@ -4,7 +4,6 @@ import Iconback from '../../Assets/Icons/SVG/Icon-back-arrow.svg';
 import { Link } from 'react-router-dom';
 import Artisan from '../Artisan/Artisan.js';
 import './Main.scss';
-// import shortId from 'shortid';
 
 export class Main extends Component {
     state = {
@@ -16,9 +15,6 @@ export class Main extends Component {
         // const { search } = this.props.location;
         const urlParams = new URLSearchParams(window.location.search);
         const jobFilter = urlParams.get('type');
-
-        // console.log('Looking for this type of job: ', jobFilter);
-
 
         axios.get("http://localhost:8080/artisan")
         .then(response => {
@@ -36,11 +32,7 @@ export class Main extends Component {
     }
 
     render () {
-        // if (!(this.state.artisanData.length > 0 )
-        // )
-        // return null;
-       
-        // console.log(this.state.artisanData)
+        
         return (
             
             <div className="main">

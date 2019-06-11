@@ -2,7 +2,6 @@ const { Router } = require('express');
 const comments = require('../data/comment');
 const router = Router();
 
-
 const url = `http://localhost:8080`;
 
 const getAllComments = (req, res) => {
@@ -26,7 +25,6 @@ const createComment = (req, res) => {
 }
 
 router.get('/',getAllComments);
-
 router.post('/', createComment);
 
 module.exports = router;

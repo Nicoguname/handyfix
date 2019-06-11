@@ -3,15 +3,10 @@ import {Link} from 'react-router-dom';
 import "./Artisan.scss";
 
 export class Artisan extends Component {
-  render() {
-    const { artisanName, trade, experience, rating, reviewCount, id } = this.props.artisanData;
 
-    // function myFunction() {
-    //   if(rating >= 4 ) {
-    //     document.getElementsByClassName("person__details--rating1").backgroundColor = "red";
-    //   }
-      
-    // }
+  render() {
+
+    const { artisanName, trade, experience, rating, reviewCount, id } = this.props.artisanData;
 
     return (
         <div className="person__container">
@@ -67,7 +62,6 @@ export class Artisan extends Component {
         <button className="request__form3">Show Reviews</button>
         </Link>
         </div>
-        
         </div>
       </div>
       </div>

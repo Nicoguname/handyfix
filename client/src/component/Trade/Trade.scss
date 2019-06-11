@@ -1,4 +1,4 @@
-@import '../styles/Variables.scss';
+@import '../Variable/Variables.scss';
 
 .trade {
 
@@ -14,16 +14,8 @@
           &--slide {
             animation-name: fade;
             animation-duration: 1.5s;
-          }
-          
+          }      
     }
-
-    // &__message {
-    //     margin: 0 16px;
-    //     padding-top: 16px;
-    //     padding-bottom: 16px;
-
-    // }
 
     &__message1 {
         margin: 0 16px;

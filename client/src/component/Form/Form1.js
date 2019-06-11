@@ -4,7 +4,7 @@ import './Form1.scss';
 import { Link } from 'react-router-dom';
 import Iconback from '../../Assets/Icons/SVG/Icon-back-arrow.svg';
 import MobilePhone from '../../Assets/Images/mobile-phone.svg';
-import Notice from '../Form/Notice.js';
+import Notice from '../../Component/Notice/Notice.js';
 
 // const tradeIds = [
 //   ''
@@ -31,7 +31,7 @@ class Form1 extends Component {
     const locationState = this.props.location.state;
     const artisan = locationState ? locationState.artisan : null;
     if(!artisan) {
-      // @todo: redirect to another page
+      
     } else {
       const { artisanName, tradeid, trade } = artisan;
       this.setState({
@@ -123,8 +123,6 @@ class Form1 extends Component {
       requestdate
     };
 
-
-    // @todo: To validate the data.
     axios
       .post("http://localhost:8080/jobs", { job })
       .then(response => {

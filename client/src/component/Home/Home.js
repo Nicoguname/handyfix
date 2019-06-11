@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Hero from './Hero.js';
-import Trade from './Trade.js';
+import Hero from '../Hero/Hero.js';
+import Trade from '../Trade/Trade.js';
 
 export class Home extends Component {
   render() {

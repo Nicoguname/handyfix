@@ -1,7 +1,5 @@
-// .person__container {
-//     background-color: #faf3eb6b;
-// }
-@import '../styles/Variables.scss';
+
+@import '../Variable/Variables.scss';
 
 .post {
         font-family: $font-Avenir-Reg;
@@ -9,7 +7,6 @@
         margin-left: 16px;
         padding: 16px 0;
         border-bottom: 1px solid grey;
-        // background-color: #faf3eb6b;
         background-color: #fffdfb; 
 
     &__details {
@@ -35,19 +32,7 @@
 
         &--rating {
             font-size: 1.1rem;
-            // margin-left: 8px;
             justify-self: right;
         }
     }
 }
-
-// .request {
-//         display: flex;
-//         justify-content: space-between;
-//         margin: 0.2rem 0rem;
-
-//         &__form1, &__form2 {
-//             font-size: 0.9rem;
-//         }
-    
-// }

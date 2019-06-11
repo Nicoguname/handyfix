@@ -1,4 +1,4 @@
-@import '../styles/Variables.scss';
+@import '../Variable/Variables.scss';
 
 .job__container {
     
@@ -17,15 +17,12 @@
         background-color: #fffdfb;
 
         &__header {
-                // font-family: '$font-family-demi-bold';
                 display: flex;
                 font-size: 1.5rem;
                 font-family: $font-Avenir-Demi;
-                // margin: 16px 0;
                 justify-content: space-around;
                 border-bottom: 2px solid grey;
                 padding: 16px 0 8px 0;
-                // background-color: #f7efef;
                 background-color: #fffdfb;
             }
 
@@ -46,7 +43,6 @@
 
         &--name1, &--trade1, &--city1,  &--details1, &--requestor1, &--status1, &--date1 {
             font-size: 1.1rem;
-            // margin: 0px 8px 8px 0;
         }
 
         &--id {
@@ -56,17 +52,9 @@
 
         &--rating {
             font-size: 1.1rem;
-            // margin-left: 8px;
             justify-self: right;
         }
     }
-
-    // &__profile {
-    //     font-size: 1.1rem;
-    //     font-weight: bold;
-    //     margin-bottom: 16px;
-
-    // }
 }
 
 .request {

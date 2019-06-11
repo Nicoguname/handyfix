@@ -1,52 +1,19 @@
 import React, { Component } from "react";
-import ImageElect from "../Assets/Icons/icons1-electrical.png";
-import ImagePlumb from "../Assets/Icons/icons8-plumber-50.png";
-import ImagePaint from "../Assets/Icons/icons8-paint-bucket-48.png";
-import ImageBrick from "../Assets/Icons/icons8-trowel-48.png";
-import ImageCarp from "../Assets/Icons/icons8-saw-48.png";
-import ImageMech from "../Assets/Icons/icons8-car-service-48.png";
+import ImageElect from "../../Assets/Icons/icons1-electrical.png";
+import ImagePlumb from "../../Assets/Icons/icons8-plumber-50.png";
+import ImagePaint from "../../Assets/Icons/icons8-paint-bucket-48.png";
+import ImageBrick from "../../Assets/Icons/icons8-trowel-48.png";
+import ImageCarp from "../../Assets/Icons/icons8-saw-48.png";
+import ImageMech from "../../Assets/Icons/icons8-car-service-48.png";
 import { NavLink } from 'react-router-dom';
-import "./styles/Trade.scss";
+import "./Trade.scss";
 
 export class Trade extends Component {
   render() {
 
-//     var slideIndex = 0;
-//     showSlides();
-
-// function showSlides() {
-//   var i;
-//   var slides = document.getElementsByClassName("trade__image--slide");
-//   // var dots = document.getElementsByClassName("dot");
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";  
-//   }
-//   slideIndex++;
-
-//   // if (slideIndex > slides.length) {slideIndex = 1}    
-//   // for (i = 0; i < dots.length; i++) {
-//   //   dots[i].className = dots[i].className.replace(" active", "");
-//   // }
-//   slides[slideIndex-1].style.display = "block";  
-//   // dots[slideIndex-1].className += " active";
-//   setTimeout(showSlides, 2000); // Change image every 2 seconds
-// }
-
     return (
-      <div className="trade">
-        
-        <div className="trade__image">
-        
-
-        {/* <div className="trade__image--slide">
-          <div className="trade__image--fade"> 2 / 2</div>
-            <img className="trade__image1" src={ImageHero2} alt="hero" />
-        </div> */}
-        {/* <div style="text-align:center">
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-      </div> */}
+      <div className="trade">   
+        <div className="trade__image"> 
         </div>
         <div className="trade__message1">Please click the relevant icon to book a service request</div>
         <div className="trade__icon">
@@ -56,9 +23,7 @@ export class Trade extends Component {
             <NavLink to="/artisan?type=electrical" activeClassName="navelect">   <div className="trade__icon--1--text">Electrical</div>
             </NavLink>
               </div>
-          </div>
-        
-       
+          </div> 
         <NavLink to="/artisan?type=plumbing" activeClassName="navplum">  <div className="trade__icon--2">
             <img src={ImagePlumb} alt="plumb" />
             <div className="trade__icon--2--middle">

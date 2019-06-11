@@ -1,4 +1,4 @@
-@import '../styles/Variables.scss';
+@import '../Variable/Variables.scss';
 
 .review {
   background-color: #fffdfb;
@@ -18,7 +18,6 @@
       display: flex;
       font-size: 1.5rem;
       font-weight: bold;
-     
     }
   }
 }

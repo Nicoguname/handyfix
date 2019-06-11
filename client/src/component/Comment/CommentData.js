@@ -16,7 +16,7 @@ class CommentData extends Component {
     const locationState = this.props.location.state;
     const artisanId = locationState ? locationState.artisanId : null;
     if (!artisanId) {
-      // this.props.history.push("/artisan");
+      
     } else {
       this.setState({ artisanId });
     }
@@ -43,7 +43,6 @@ class CommentData extends Component {
   }
 
   render() {
-    // console.log(this.state.comments);
 
     return (
       <div>
@@ -55,7 +54,6 @@ class CommentData extends Component {
                </Link>
                 <div className="review__header--profile">REVIEWS</div>
                 </div>
-
           {this.state.comments.map(comment => (
             <Comments key={comment.id} comments={comment} />
           ))}

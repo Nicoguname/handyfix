@@ -1,4 +1,4 @@
-@import '../styles/Variables.scss';
+@import '../Variable/Variables.scss';
 
 .form {
 
@@ -37,7 +37,6 @@
             font-family: $font-Avenir-Demi;
             color: #292727cb;
             margin-right: 12px;
-            // color: #2b2626;
         }
 
         &__tradeid {

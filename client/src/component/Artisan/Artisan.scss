@@ -1,4 +1,4 @@
-@import '../styles/Variables.scss';
+@import '../Variable/Variables.scss';
 
 .person__container {
     background-color: #fffdfb;
@@ -40,16 +40,8 @@
             margin: 0.1rem;
             font-family: $font-Avenir-Demi;
         }
-    }
-
-    
+    }  
 }
-
-// .person {
-//     &__details--rating, &__details--rating1 {
-//     font-family: $font-Avenir-Demi;
-//     }
-// }
 
 .request {
         display: flex;
@@ -60,6 +52,5 @@
             background-color: #ebe5e1;
             height: 25px;
             border-radius: 5px;
-        }
-    
+        }  
 }
