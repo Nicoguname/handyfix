@@ -5,7 +5,7 @@ import Trade from './Trade.js';
 export class Home extends Component {
   render() {
     return (
-        <div>
+        <div classname="home">
           <Hero />
           <Trade />
         </div>

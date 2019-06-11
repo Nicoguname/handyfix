@@ -4,6 +4,7 @@ import './Form1.scss';
 import { Link } from 'react-router-dom';
 import Iconback from '../../Assets/Icons/SVG/Icon-back-arrow.svg';
 import MobilePhone from '../../Assets/Images/mobile-phone.svg';
+import Notice from '../Form/Notice.js';
 
 // const tradeIds = [
 //   ''
@@ -113,20 +114,19 @@ class Form1 extends Component {
       requestdate
     };
 
-    // debugger;
 
     // @todo: To validate the data.
     axios
       .post("http://localhost:8080/jobs", { job })
       .then(response => {
-        // @todo: Whatever should happen after succesfully submitting a request
+        
         alert("Your request has been submitted. A technician will contact you shortly.");
        
         console.log("Response from submitting job request: ", response);
         this.props.history.push("/home");
       })
       .catch(error => {
-        // @todo: Whatever should fi there is an error submitting a request
+        
         console.log("Error from server: ", error);
         alert("There was an error submitting your job request");
       });
@@ -208,9 +208,8 @@ class Form1 extends Component {
         
         </div>
       </form>
-      <div className="form__notice">DISCLAIMER: At HandyFix we are always committed to very high standards of service delivery. Each field technician has undergone 
-      a thorough background check for added assurance and integrity. However, while vouching for the professionalism of our workforce, we would like to remind our customers that if a real emergency arises (e.g. fire, security, medical), that they promptly contact 
-      the approprate authorities via the emergency hotlines </div> 
+      <Notice />
+      
       </div>
     );
   }

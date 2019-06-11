@@ -37,20 +37,21 @@
        
         &--name, &--trade, &--city, &--details, &--requestor, &--status, &--date {
             font-family: $font-Avenir-Demi;
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: bold;
             color: #292727cb;
-            width: 35%;
+            width: 30%;
             margin: 0px 8px 8px 0;
         }
 
-        &--name1, &--trade1, &--city1, &--details1, &--requestor1, &--status1, &--date1 {
-            font-size: 1.2rem;
-            margin: 0px 8px 8px 0;
+        &--name1, &--trade1, &--city1,  &--details1, &--requestor1, &--status1, &--date1 {
+            font-size: 1.1rem;
+            // margin: 0px 8px 8px 0;
         }
+
         &--id {
             font-size: 1rem;
-            margin: 1.8px 8px 8px 0;
+            margin: 0.5px 8px 8px 12px;
         }
 
         &--rating {

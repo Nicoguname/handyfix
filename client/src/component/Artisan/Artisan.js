@@ -31,7 +31,7 @@ export class Artisan extends Component {
           <div className="person__details--trade1">Trade:</div>
           <div className="person__details--trade">{trade}</div>
           <div className="person__details--rating">(Revs. --- {reviewCount} | </div>
-          <div className="person__details--rating1"> Avg. --- {rating}</div>
+          <div className="person__details--rating1"> Avg. --- {rating} *)</div>
         </div>
         <div className="person__details">
           <div className="person__details--exp1">Experience:</div>

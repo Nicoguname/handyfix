@@ -28,7 +28,7 @@ class Jobs extends Component {
   }
 
   render() {
-    console.log(this.state.jobs);
+    // console.log(this.state.jobs);
     if (!this.state.jobs.length) {
         return (
             <div className="App">
@@ -48,7 +48,7 @@ class Jobs extends Component {
                 <div className="job__database">
                 <div className="job__database--name">Artisan Name:</div>
                   <div className="job__database--name1">{job.artisanName}</div>
-                  <div className="job__database--id">({job.tradeid})</div>
+                  <div className="job__database--id"> ({job.tradeid})</div>
                   </div>
                   <div className="job__database">
                   <div className="job__database--trade">Service Type:</div>

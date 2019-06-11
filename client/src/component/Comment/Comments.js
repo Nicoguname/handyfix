@@ -6,8 +6,6 @@ export class Comments extends Component {
   render() {
     const { artisanName, trade, comments, rating, reviewername, id, reviewdate } = this.props.comments;
 
-    // console.log(this.props.comments);
-
     return (
   
       <div className="App">
@@ -32,7 +30,7 @@ export class Comments extends Component {
                   </div>
                   <div className="post__details">
                     <div className="post__details--rate">Rating:</div>
-                    <div className="post__details--rate1">{rating}</div>
+                    <div className="post__details--rate1">{rating}*</div>
                   </div>
                   <div className="post__details">
                     <div className="post__details--reviewer">Review By:</div>

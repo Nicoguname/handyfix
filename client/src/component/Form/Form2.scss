@@ -55,35 +55,28 @@
         }
 
         &__name5 {
-            // display: flex;
+          
             font-size: 1.1rem;
             font-weight: 400;
-            // font-style: italic;
-            color: grey;
             padding-left: 5px;
             width: 66%;
             height: 25px;
             border: 2px solid grey;
             border-radius: 5px;
             margin: 12px auto;
-            // align-content: center;
+     
         }
 
         &__comm2 {
             display: flex;
             font-size: 1.1rem;
             font-weight: 400;
-            color: grey;
             padding-left: 5px;
             width: 96.7%;
             height: 110px;
             border: 2px solid grey;
             border-radius: 5px;
             margin-bottom: 16px;
-            // padding: 0 0 0 0;
-            // justify-content: center;
-            // text-align: center;
-            // text-align: justify;
         }
 
         &__rating2 {
@@ -102,10 +95,6 @@
             border: 1px solid grey;
             background-color: rgb(240, 172, 172);
         }
-
-    &__notice {
-        margin: 32px 0px;
-    }
 }
 
 .form2__comm2 {

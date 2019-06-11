@@ -5,7 +5,7 @@ import Main from "./component/Main/Main.js";
 import Navigation from "./component/Navigation/Navigation.js";
 import Form1 from "./component/Form/Form1";
 import Form2 from "./component/Form/Form2";
-import FormHandler from './component/FormHandler/FormHandler';
+// import FormHandler from './component/FormHandler/FormHandler';
 import Comments from "./component/Comment/Comments.js";
 import Jobs from './component/Jobs/Jobs.js';
 import "./App.css";
@@ -30,13 +30,13 @@ function App() {
         <Route exact path="/comments" 
           render={(props) => (
             <CommentData {...props}><Comments /></CommentData>
-          )}
-        ></Route>
+          )}>
+          </Route>
         <Route exact path="/form1" component={Form1} />
         <Route exact path="/form2" component={Form2} />
         <Redirect exact to="/home" from="/" />
-        <FormHandler exact path="/formhandler" />
-        <Form1 exact path="/form1" />
+        {/* <FormHandler exact path="/formhandler" /> */}
+        {/* <Form1 exact path="/form1" /> */}
 
       </Switch>
     </BrowserRouter>
