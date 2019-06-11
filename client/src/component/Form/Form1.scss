@@ -40,28 +40,40 @@
             // color: #2b2626;
         }
 
-        &__name4, &__desc1,  &__date1, &__status1, &__status2 {
+        &__tradeid {
+            font-size: 1rem;
+            margin: 1.8px 0px 8px 8px;
+        }
+
+        &__name4, &__desc1,  &__date1, &__status1, &__phoneno1, &__status2 {
             display: none;
         }
 
         &__name2, &__service2, &__city2 {
             font-size: 1.2rem;
             font-weight: 400;
-            
-            // margin-right: 12px;
         }
 
         &__name5 {
-            // display: flex;
             font-size: 1.1rem;
             font-weight: 400;
             padding-left: 3px;
             width: 70%;
             height: 25px;
-            border: 2px solid grey;
+            border: 1px solid grey;
             border-radius: 5px;
             margin: 12px auto;
-            // align-content: center;
+        }
+
+        &__phoneno2 {
+            font-size: 1.1rem;
+            font-weight: 400;
+            padding-left: 3px;
+            width: 43%;
+            height: 25px;
+            border: 1px solid grey;
+            border-radius: 5px;
+            margin-top: 12px;
         }
 
         &__desc2 {
@@ -71,13 +83,9 @@
             padding-left: 3px;
             width: 97%;
             height: 100px;
-            border: 2px solid grey;
+            border: 1px solid grey;
             border-radius: 5px;
             margin-bottom: 16px;
-            // padding: 0 0 0 0;
-            // justify-content: center;
-            // text-align: center;
-            // text-align: justify;
         }
 
         &__submit {

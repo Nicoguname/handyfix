@@ -155,7 +155,8 @@ class Form2 extends Component {
           <div className="form2__border">
           <div className="form2__name">
             <label className="form2__name1" htmlFor="artisan name">Artisan Name:</label>
-            <span className="form2__name2">{artisanName} ({tradeid})</span>
+            <span className="form2__name2">{artisanName}</span>
+            <span className="form2__tradeid">({tradeid})</span>
           </div>
           <div className="form2__service">
             <label className="form2__service1" htmlFor="service type">Service Type:</label>
@@ -178,14 +179,7 @@ class Form2 extends Component {
             />
           </div>
 
-          <div className="form2__name3">
-            <label className="form2__name4" htmlFor="reviewer name">Review by:</label>
-            <input className="form2__name5"
-              type="text" placeholder="Your Name"
-              value={reviewername}
-              onChange={this.handleReviewerNameChange}
-            />
-          </div>
+          
 
           <div className="form2__rating">
             <label className="form2__rating1" htmlFor="rating">Rating:</label>
@@ -198,6 +192,15 @@ class Form2 extends Component {
               <option value="5">5</option>
             </select>
             </div>
+            
+            <div className="form2__name3">
+            <label className="form2__name4" htmlFor="reviewer name">Review by:</label>
+            <input className="form2__name5"
+              type="text" placeholder="Your Name"
+              value={reviewername}
+              onChange={this.handleReviewerNameChange}
+            />
+          </div>
           {/* <div className="form2__name3">
             <label className="form2__name4" htmlFor="requestor name">Review By:</label>
             <input className="form2__name5"

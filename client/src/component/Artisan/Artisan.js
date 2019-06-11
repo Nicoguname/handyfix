@@ -6,19 +6,16 @@ export class Artisan extends Component {
   render() {
     const { artisanName, trade, experience, rating, reviewCount, id } = this.props.artisanData;
 
-    // console.log(this.props.artisanData.rating);
-
-    function myFunction() {
-      if(rating >= 4 ) {
-        document.getElementsByClassName("person__details--rating1").backgroundColor = "red";
-      }
+    // function myFunction() {
+    //   if(rating >= 4 ) {
+    //     document.getElementsByClassName("person__details--rating1").backgroundColor = "red";
+    //   }
       
-    }
+    // }
 
     return (
         <div className="person__container">
       <div className="person">
-         {/* <div className="person__profile">PROFILE:</div> */}
         <div className="trade__image--slide">
         </div>
         <div className="person__details">
@@ -72,10 +69,6 @@ export class Artisan extends Component {
         </div>
         
         </div>
-        {/* <div className="person__details">
-                <div className="person__details--rating">Rating:</div>
-                <div className="person__details--rating1">{rating}</div> */}
-        {/* </div> */}
       </div>
       </div>
     );

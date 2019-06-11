@@ -7,14 +7,6 @@ const { Router } = require('express');
 const jobs = require('../data/job');
 const router = Router();
 
-// "id": "SCP01",
-// "artisanName": "John French",
-// "trade": "Carpentry",
-// "city": "Eglington",
-// "description": "Damaged dining chair.",
-// "status": "Ongoing",
-// "requestdate": "05/14/2018"
-
 const url = `http://localhost:8080`;
 
 const getAllJobs = (req, res) => {
@@ -35,7 +27,9 @@ const createJob = (req, res) => {
     .create({
       from: process.env.TWILIO_PHONE_NUMBER,
       to: "+16476574618",
-      body: job.description + ": " + job.city + ": " + job.requestorname
+      body: "Job: " + job.description + "; " + "City: " + job.city
+             + "; " + "Requestor: " + job.requestorname + "; " 
+             + "Phone No.: " +job.phoneno
     })
     .then(() => {
     //   res.send(JSON.stringify({ success: true }));

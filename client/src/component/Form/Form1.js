@@ -18,6 +18,7 @@ class Form1 extends Component {
       artisanName: "",
       trade: "",
       requestorname: "",
+      phoneno: "",
       city: "East York",
       description: "",
       status: "In review",
@@ -65,6 +66,12 @@ class Form1 extends Component {
     });
   };
 
+  handlePhoneChange = event => {
+    this.setState({
+      phoneno: event.target.value
+    });
+  };
+
   handleCityChange = event => {
     this.setState({
       city: event.target.value
@@ -90,6 +97,7 @@ class Form1 extends Component {
       artisanName,
       trade,
       requestorname,
+      phoneno,
       city,
       description,
       status,
@@ -108,6 +116,7 @@ class Form1 extends Component {
       artisanName,
       trade,
       requestorname,
+      phoneno,
       city,
       description,
       status,
@@ -139,6 +148,7 @@ class Form1 extends Component {
       artisanName,
       trade,
       requestorname,
+      phoneno,
       city,
       description,
       status,
@@ -161,7 +171,8 @@ class Form1 extends Component {
           <div className="form__border">
           <div className="form__name">
             <label className="form__name1" htmlFor="artisan name">Artisan Name:</label>
-            <span className="form__name2">{artisanName} ({tradeid})</span>
+            <span className="form__name2">{artisanName}</span>
+            <span className="form__tradeid">({tradeid})</span>
           </div>
           <div className="form__service">
             <label className="form__service1" htmlFor="service type">Service Type:</label>
@@ -171,12 +182,19 @@ class Form1 extends Component {
             <label className="form__city1" htmlFor="city">City:</label>
             <select className="form__city2" value={city} onChange={this.handleCityChange}>
               <option defaultValue=""></option>
-              <option value="east york">East York</option>
-              <option value="eglinton">Eglington</option>
-              <option value="kipling">Kipling</option>
+              <option value="East york">East York</option>
+              <option value="Eglington">Eglington</option>
+              <option value="Kipling">Kipling</option>
             </select>
           </div>
 
+            <div className="form__phone">
+              <label className="form__phoneno1" htmlFor="requestor name">Phone Number:</label>
+              <input className="form__phoneno2"
+                type="text" placeholder="Phone Number"
+                value={phoneno}
+                onChange={this.handlePhoneChange}
+              />
           <div className="form__name3">
             <label className="form__name4" htmlFor="requestor name">Requestor Name:</label>
             <input className="form__name5"
@@ -184,6 +202,7 @@ class Form1 extends Component {
               value={requestorname}
               onChange={this.handleRequestorNameChange}
             />
+          </div>
           </div>
           <div className="form__desc">
             <label className="form__desc1" htmlFor="description">Description of problem:</label>
