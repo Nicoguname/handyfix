@@ -170,7 +170,7 @@ class Form1 extends Component {
           <div className="form__city">
             <label className="form__city1" htmlFor="city">City:</label>
             <select className="form__city2" value={city} onChange={this.handleCityChange}>
-              <option defaultvalue="east York">East York</option>
+              <option defaultValue="east York">East York</option>
               <option value="eglinton">Eglington</option>
               <option value="kipling">Kipling</option>
             </select>
@@ -199,7 +199,7 @@ class Form1 extends Component {
           <div className="form__status">
             <label className="form__status1" htmlFor="job status">Job Status:</label>
             <select className="form__status2" value={status} onChange={this.handleStatusChange}>
-              <option defaultvalue="in review">In review</option>
+              <option defaultValue="in review">In review</option>
             </select>
           </div>
        
@@ -207,7 +207,7 @@ class Form1 extends Component {
         
         </div>
       </form>
-      <div class="form__notice">DISCLAIMER: At HandyFix we are always committed to very high standards of service delivery. Each field technician has undergone 
+      <div className="form__notice">DISCLAIMER: At HandyFix we are always committed to very high standards of service delivery. Each field technician has undergone 
       a thorough background check for added assurance and integrity. However, while vouching for the professionalism of our workforce, we would like to remind our customers that if a real emergency arises (e.g. fire, security, medical), that they promptly contact 
       the approprate authorities via the emergency hotlines </div> 
       </div>

@@ -13,7 +13,7 @@ export class Main extends Component {
 
     componentDidMount() {
 
-        const { search } = this.props.location;
+        // const { search } = this.props.location;
         const urlParams = new URLSearchParams(window.location.search);
         const jobFilter = urlParams.get('type');
 
@@ -43,17 +43,17 @@ export class Main extends Component {
         // console.log(this.state.artisanData)
         return (
             
-            <div>
-                <div className="person__header">
+            <div className="main">
+                <div className="main__header">
                <Link to="/home"> 
-                    <div className="person__header--icon">
+                    <div className="main__header--icon">
                         <img  src={Iconback} alt="backarrow" />
                     </div>
                </Link>
-                <div className="person__header--profile">PROFILES</div>
+                <div className="main__header--profile">PROFILES</div>
                 </div>
                 {this.state.artisanData.map(artisan => (
-                    <Artisan artisanData = {artisan}/>
+                    <Artisan key={artisan.id} artisanData = {artisan}/>
                    
                 ))}
             </div>

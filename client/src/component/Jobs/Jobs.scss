@@ -1,6 +1,8 @@
-// @import '../../styles/mixins.scss';
+@import '../styles/Variables.scss';
 
 .job__container {
+    
+    font-family: $font-Avenir-Reg;
     background-color: #fffdfb;
     padding-bottom: 16px;
 }
@@ -18,7 +20,7 @@
                 // font-family: '$font-family-demi-bold';
                 display: flex;
                 font-size: 1.5rem;
-                font-weight: bold;
+                font-family: $font-Avenir-Demi;
                 // margin: 16px 0;
                 justify-content: space-around;
                 border-bottom: 2px solid grey;
@@ -34,8 +36,11 @@
         
        
         &--name, &--trade, &--city, &--details, &--requestor, &--status, &--date {
+            font-family: $font-Avenir-Demi;
             font-size: 1.2rem;
             font-weight: bold;
+            color: #292727cb;
+            width: 35%;
             margin: 0px 8px 8px 0;
         }
 

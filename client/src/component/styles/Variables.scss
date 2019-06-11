@@ -1,0 +1,21 @@
+
+$font-Avenir-Reg: AvenirNextReg;
+$font-Avenir-Demi: AvenirNextDemi;
+$font-Avenir-Bold: AvenirNextBold;
+
+$font-bold: bold;
+
+@font-face {
+    font-family: 'AvenirNextReg';
+    src: url('../../Assets/Fonts/AvenirNextLTPro-Regular.otf');
+}
+
+@font-face {
+    font-family: 'AvenirNextDemi';
+    src: url('../../Assets/Fonts/AvenirNextLTPro-Demi.otf');
+}
+
+@font-face {
+    font-family: 'AvenirNextBold';
+    src: url('../../Assets/Fonts/AvenirNextLTPro-Bold.otf');
+}

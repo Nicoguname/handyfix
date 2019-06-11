@@ -4,9 +4,9 @@ import "./Artisan.scss";
 
 export class Artisan extends Component {
   render() {
-    const { artisanName, trade, experience, rating, id } = this.props.artisanData;
+    const { artisanName, trade, experience, rating, reviewCount, id } = this.props.artisanData;
 
-    console.log(this.props.artisanData);
+    console.log(this.props.artisanData.rating);
 
     return (
         <div className="person__container">
@@ -17,14 +17,14 @@ export class Artisan extends Component {
         <div className="person__details">
           <div className="person__details--name1">Name:</div>
           <div className="person__details--name">{artisanName}</div>
-          {/* <div className="person__details--rating">Rating:</div> */}
-          <div className="person__details--rating">(Reviews: 5)</div>
-          <div className="person__details--rating">{rating}*</div>
-          {/* <div className="person__details--stars">{printStars({rating})}</div> */}
+      
+         
         </div>
         <div className="person__details">
           <div className="person__details--trade1">Trade:</div>
           <div className="person__details--trade">{trade}</div>
+          <div className="person__details--rating">(Revs. => {reviewCount} | </div>
+          <div className="person__details--rating1"> Avg. => {rating}*)</div>
         </div>
         <div className="person__details">
           <div className="person__details--exp1">Experience:</div>

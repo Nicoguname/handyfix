@@ -1,4 +1,8 @@
+@import '../styles/Variables.scss';
+
 .form {
+
+    font-family: $font-Avenir-Reg;
     margin: 0 16px;
 
     &__image {
@@ -8,8 +12,8 @@
     margin: 16px 16px;
 
         &--title {
-            font-weight: bold;
-            font-size: 2.2rem;
+            font-family: $font-Avenir-Demi;
+            font-size: 2rem;
             margin-left: 36px; 
             margin-right: 8px;
         }
@@ -28,10 +32,12 @@
     }
 
         &__name1, &__service1, &__city1 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 400;
+            font-family: $font-Avenir-Demi;
+            color: #292727cb;
             margin-right: 12px;
-            color: #2b2626;
+            // color: #2b2626;
         }
 
         &__name4, &__desc1,  &__date1, &__status1, &__status2 {
@@ -81,13 +87,14 @@
             font-size: 1.1rem;
             height: 30px;
             border-radius: 5px;
-            font-weight: 700;
+            font-family: $font-Avenir-Bold;
             border: 1px solid grey;
             background-color: rgb(240, 172, 172);
         }
 
     &__notice {
-        margin: 32px 0px;
+        font-size: 12px;
+        margin: 48px 0;
     }
 
     &__city2 {

@@ -57,7 +57,7 @@ class CommentData extends Component {
                 </div>
 
           {this.state.comments.map(comment => (
-            <Comments comments={comment} />
+            <Comments key={comment.id} comments={comment} />
           ))}
 
         </div>

@@ -1,8 +1,9 @@
 // @import '../../Assets/fonts/AvenirNextLTPro-Bold.otf';
 
-@import "../styles/mixins.scss";
+@import '../styles/Variables.scss';
 
-.person {
+.main {
+  
   background-color: #fffdfb;
 
   &__header {
@@ -16,7 +17,7 @@
     }
 
     &--profile {
-      font-family: "$font-family-demi-bold";
+      font-family: $font-Avenir-Bold;
       display: flex;
       font-size: 1.5rem;
       font-weight: bold;

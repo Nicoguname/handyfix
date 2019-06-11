@@ -21,8 +21,6 @@ function App() {
       <Navigation />
       <Switch>
         <Route exact path="/home" component={Home} />
-        {/* <Route exact path="/comments" component={Comments} /> */}
-        {/* <Route exact path="/comments" component={CommentData} /> */}
         <Jobs exact path="/jobs" component={JobPage}/>
         <Route exact path="/artisan" 
           render={(props) => (
@@ -34,17 +32,11 @@ function App() {
             <CommentData {...props}><Comments /></CommentData>
           )}
         ></Route>
-       
         <Route exact path="/form1" component={Form1} />
         <Route exact path="/form2" component={Form2} />
-        
-       
         <Redirect exact to="/home" from="/" />
-        {/* <Form /> */}
         <FormHandler exact path="/formhandler" />
         <Form1 exact path="/form1" />
-        {/*<Form2 exact path="/form2" />*/}
-        {/* <Comments exact path="/comments"/> */}
 
       </Switch>
     </BrowserRouter>

@@ -1,8 +1,10 @@
 // .person__container {
 //     background-color: #faf3eb6b;
 // }
+@import '../styles/Variables.scss';
 
 .post {
+        font-family: $font-Avenir-Reg;
         margin-right: 16px;
         margin-left: 16px;
         padding: 16px 0;
@@ -17,7 +19,8 @@
        
         &--name, &--trade, &--comment, &--date, &--rate, &--reviewer {
             font-size: 1.3rem;
-            font-weight: bold;
+            font-family: $font-Avenir-Demi;
+            color: #292727cb;
             margin: 0px 8px 8px 0;
         }
 

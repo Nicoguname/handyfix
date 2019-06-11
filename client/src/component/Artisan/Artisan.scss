@@ -1,17 +1,17 @@
+@import '../styles/Variables.scss';
+
 .person__container {
     background-color: #fffdfb;
+    font-family: $font-Avenir-Reg;
 }
 
 .person {
-    // font-family:
-        margin-right: 16px;
-        margin-left: 16px;
-        padding: 16px 0 8px 0;
-        border-bottom: 1px solid grey;
-        
-
-        
-
+    
+    margin-right: 16px;
+    margin-left: 16px;
+    padding: 16px 0 8px 0;
+    border-bottom: 1px solid grey;
+    
     &__details {
         display: flex;
         flex-direction: row;
@@ -25,29 +25,35 @@
 
         &--name1, &--trade1, &--exp1 {
             font-size: 1.3rem;
-            font-weight: bold;
+            font-family: $font-Avenir-Demi;
+            color: #292727cb;
             margin: 0px 8px 8px 0;
         }
 
         &--rating {
-            font-size: 1.2rem;
-            margin: 0 0.1rem 0 1rem;
+            font-size: 1rem;
+            margin: 0 0.1rem 0 0.5rem;
             justify-self: right;
+        }
+
+        &--rating, &--rating1 {
+            margin: 0.1rem;
+            font-family: $font-Avenir-Demi;
         }
     }
 
-    // &__profile {
-    //     font-size: 1.1rem;
-    //     font-weight: bold;
-    //     margin-bottom: 16px;
-
-    // }
+    
 }
+
+// .person {
+//     &__details--rating, &__details--rating1 {
+//     font-family: $font-Avenir-Demi;
+//     }
+// }
 
 .request {
         display: flex;
         justify-content: space-between;
-        // margin: 0.2rem 0rem;
 
         &__form1, &__form2, &__form3 {
             font-size: 1rem;

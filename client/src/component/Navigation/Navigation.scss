@@ -1,13 +1,12 @@
-@mixin mobile {
-  @media (min-width: 120px) {
-    @content;
-  }
-}
+// @mixin mobile {
+//   @media (min-width: 120px) {
+//     @content;
+//   }
+// }
+
+@import '../styles/Variables.scss';
 
 .nav {
-  @include mobile {
-    // width: 320px;
-
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -16,6 +15,7 @@
     padding-top: 0.3rem;
     background-color: #222218;
     border: 1px solid black;
+    font-family: $font-Avenir-Reg;
     // position: fixed;
 
     &__logo {
@@ -39,37 +39,19 @@
       justify-content: space-evenly;
 
       &--profile, &--request {
-        // position: relative;
-        list-style-type: none;
-        color: silver;
+       text-decoration: none;
+  
+        color: white;
         margin: 32px 12px;
         align-items: bottom;
       }
-
-      // &--request {
-      //   // position: relative;
-      //   list-style-type: none;
-      //   color: silver;
-      //   margin: 32px 16px;
-      //   align-items: bottom;
-      // }
-
-    //   &--request:hover,
-    //   &--review:hover {
-    //     border-bottom: 2px solid #262626;
-    //   
     }
-    //
   }
+
+
+
+.activenav {
+  color: #fc2323;
 }
 
 
-li:hover {
-  background-color: #456463;
-}
-
-li .nav__header--profile:active {
-  // text-decoration-line: underline; 
-  border-bottom: 2px solid red;
-  
-}
