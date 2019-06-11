@@ -190,6 +190,7 @@ class Form2 extends Component {
           <div className="form2__rating">
             <label className="form2__rating1" htmlFor="rating">Rating:</label>
             <select className="form2__rating2" value={rating} onChange={this.handleRatingChange}>
+              <option defaultValue=""></option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>

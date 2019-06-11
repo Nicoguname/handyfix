@@ -170,7 +170,8 @@ class Form1 extends Component {
           <div className="form__city">
             <label className="form__city1" htmlFor="city">City:</label>
             <select className="form__city2" value={city} onChange={this.handleCityChange}>
-              <option defaultValue="east York">East York</option>
+              <option defaultValue=""></option>
+              <option value="east york">East York</option>
               <option value="eglinton">Eglington</option>
               <option value="kipling">Kipling</option>
             </select>

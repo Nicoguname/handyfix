@@ -66,7 +66,7 @@
         "artisanName": "John French",
         "trade": "Carpentry", 
         "comments": "Below average service. Could improve on providing feedback when things aren't going as planned",
-        "rating": 5,
+        "rating": 2,
         "ratingsCount": 1,
         "reviewername": "Favour Anderson",
         "reviewdate": "12/03/2019"
@@ -76,10 +76,52 @@
         "artisanName": "Kathy Howard",
         "trade": "Carpentry", 
         "comments": "Excellent customer service. He's very professional",
-        "rating": 2,
+        "rating": 5,
         "ratingsCount": 1,
         "reviewername": "Kehinde Igwe ",
         "reviewdate": "24/06/2018"
+        
+    },
+    {
+        "id": "SBL01",
+        "artisanName": "Amanda Biles",
+        "trade": "Bricklaying", 
+        "comments": "Top-notch service. Would recommend her services to anyone, anytime",
+        "rating": 4,
+        "ratingsCount": 1,
+        "reviewername": "Fejiro Oguname",
+        "reviewdate": "10/06/2018"
+    },
+    {
+        "id": "SBL02",
+        "artisanName": "Chauncey Hannibal",
+        "trade": "Bricklaying", 
+        "comments": "Chancey is the man for all your house projects. He is ever dependable",
+        "rating": 4,
+        "ratingsCount": 1,
+        "reviewername": "Naomi Cantrell",
+        "reviewdate": "18/02/2019"
+        
+    },
+    {
+        "id": "SAM01",
+        "artisanName": "Kingsley Woods",
+        "trade": "Auto-Mech", 
+        "comments": "Average service. Price is fair for the service you are getting",
+        "rating": 3,
+        "ratingsCount": 1,
+        "reviewername": "Anthony Samuel",
+        "reviewdate": "15/09/2018"
+    },
+    {
+        "id": "SAM02",
+        "artisanName": "Jake Holloway",
+        "trade": "Auto-Mech", 
+        "comments": "If you're looking for a reliable and experienced auto-mechanic, then Jake is your guy. He's very professional",
+        "rating": 5,
+        "ratingsCount": 1,
+        "reviewername": "Beatrice Ajala",
+        "reviewdate": "02/12/2018"
         
     }
    

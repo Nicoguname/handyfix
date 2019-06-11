@@ -7,7 +7,7 @@
             "experience": "Certified electrician with over 15 years practical experience. Your satisfaction and safety is my top priority.",
             "rating": 4,
             "reviewCount": 1,
-            "date": "10/02/2018"
+            "date": "02/10/2018"
         },
         {
             "id": "SEL02",
@@ -16,7 +16,7 @@
             "experience": "Certified electrician with over 13 years practical experience. If you value excellence, then look no further.",
             "rating": 5,
             "reviewCount": 1,
-            "date": "03/19/2019"
+            "date": "19/03/2019"
         },
         {
             "id": "SPT01",
@@ -25,7 +25,7 @@
             "experience": "Certified and artistic painter with over 10 years practical experience. I aim to bring colour to your life and living space.",
             "rating": 4,
             "reviewCount": 1,
-            "date": "01/23/2019"
+            "date": "23/01/2019"
         },
         {
             "id": "SPT02",
@@ -34,7 +34,7 @@
             "experience": "Certified painter with over 15 years practical experience. Aiming to add colour to your life",
             "rating": 5,
             "reviewCount": 1,
-            "date": "08/30/2018"
+            "date": "30/08/2018"
         },
         {
             "id": "SPL01",
@@ -43,7 +43,7 @@
             "experience": "Certified plumber with over 18 years practical experience. Your utmost satisfaction is guaranteed.",
             "rating": 4,
             "reviewCount": 1,
-            "date": "09/18/2018"
+            "date": "18/09/2018"
         },
         
         {
@@ -53,7 +53,7 @@
             "experience": "Certified plumber with 12 years practical experience. My specialty cuts across home/residential and industrial plumbing.",
             "rating": 4,
             "reviewCount": 1,
-            "date": "02/27/2019"
+            "date": "27/02/2019"
         },
         {
             "id": "SCP01",
@@ -62,15 +62,51 @@
             "experience": "Certified carpenter with over 16 years practical experience. Woodwork is my thing. Adding my creativity to your home",
             "rating": 4,
             "reviewCount": 1,
-            "date": "05/14/2018"
+            "date": "14/05/2018"
         },
         {
             "id": "SCP02",
             "artisanName": "Kathy Howard",
-            "trade": "Carpenter",
-            "experience": "Certified carpenter with over 12 years practical experience. Hdlping you to realise your artistic dreams.",
+            "trade": "Carpentry",
+            "experience": "Certified carpenter with over 12 years practical experience. Helping you to realise your artistic dreams.",
             "rating": 5,
             "reviewCount": 1,
-            "date": "11/08/2018"
+            "date": "08/11/2018"
+        },
+        {
+            "id": "SBL01",
+            "artisanName": "Amanda Biles",
+            "trade": "Bricklaying",
+            "experience": "Certified mason with over 12 years hands-on experience. Laying a solid foundation for your homes and projects",
+            "rating": 3,
+            "reviewCount": 1,
+            "date": "14/12/2018"
+        },
+        {
+            "id": "SBL02",
+            "artisanName": "Chauncey Hannibal",
+            "trade": "Bricklaying",
+            "experience": "Experienced mason with over 25 years practical experience. Professionalism and total customer satisfaction is guaranteed",
+            "rating": 4,
+            "reviewCount": 1,
+            "date": "26/04/2018"
+        },
+        {
+            "id": "SAM01",
+            "artisanName": "Kingsley Woods",
+            "trade": "Auto-Mech",
+            "experience": "Certified auto-mechanic with over 15 years hands-on experience. I specialised in a broad range of SUV's and sedans",
+            "rating": 4,
+            "reviewCount": 1,
+            "date": "14/12/2018"
+        },
+        {
+            "id": "SAM02",
+            "artisanName": "Jake Holloway",
+            "trade": "Auto-Mech",
+            "experience": "Experienced auto-mechanic with over 12 years practical experience. Ensuring you have a serene driving experience",
+            "rating": 4,
+            "reviewCount": 1,
+            "date": "26/04/2018"
         }
     ]

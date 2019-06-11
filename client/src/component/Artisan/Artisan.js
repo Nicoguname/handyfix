@@ -6,7 +6,14 @@ export class Artisan extends Component {
   render() {
     const { artisanName, trade, experience, rating, reviewCount, id } = this.props.artisanData;
 
-    console.log(this.props.artisanData.rating);
+    // console.log(this.props.artisanData.rating);
+
+    function myFunction() {
+      if(rating >= 4 ) {
+        document.getElementsByClassName("person__details--rating1").backgroundColor = "red";
+      }
+      
+    }
 
     return (
         <div className="person__container">
@@ -23,8 +30,8 @@ export class Artisan extends Component {
         <div className="person__details">
           <div className="person__details--trade1">Trade:</div>
           <div className="person__details--trade">{trade}</div>
-          <div className="person__details--rating">(Revs. => {reviewCount} | </div>
-          <div className="person__details--rating1"> Avg. => {rating}*)</div>
+          <div className="person__details--rating">(Revs. --- {reviewCount} | </div>
+          <div className="person__details--rating1"> Avg. --- {rating}</div>
         </div>
         <div className="person__details">
           <div className="person__details--exp1">Experience:</div>
