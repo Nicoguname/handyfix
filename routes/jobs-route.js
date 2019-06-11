@@ -3,12 +3,6 @@ process.env.TWILIO_AUTH_TOKEN="cf51831e8a217f0aaee0f6e5e4798411"
 process.env.TWILIO_PHONE_NUMBER="+15878031118"
 const client = require('twilio')(process.env.TWILIO_ACCOUT_SID,process.env.TWILIO_AUTH_TOKEN);
 
-// require('dotenv').config();
-// process.env.TWILIO_ACCOUNT_SID=TWILIO_ACCOUNT_SID;
-// process.env.TWILIO_AUTH_TOKEN=TWILIO_AUTH_TOKEN;
-// process.env.TWILIO_PHONE_NUMBER=TWILIO_FROM_PHONE_NUMBER
-// const client = require('twilio')(process.env.TWILIO_ACCOUT_SID,process.env.TWILIO_AUTH_TOKEN);
-
 const { Router } = require('express');
 const jobs = require('../data/job');
 const router = Router();
