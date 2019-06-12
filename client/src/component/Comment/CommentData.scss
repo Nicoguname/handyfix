@@ -1,4 +1,4 @@
-@import '../Variable/Variables.scss';
+@import "../Variable/Variables.scss";
 
 .review {
   background-color: #fffdfb;
@@ -7,10 +7,10 @@
     display: flex;
     border-bottom: 2px solid grey;
     padding: 16px 0 8px 0;
-   
+
     &--icon {
-        margin-right: 7.5rem;
-        margin-left: 16px;
+      margin-right: 7.5rem;
+      margin-left: 16px;
     }
 
     &--profile {

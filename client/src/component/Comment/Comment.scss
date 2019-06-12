@@ -1,38 +1,47 @@
-
-@import '../Variable/Variables.scss';
+@import "../Variable/Variables.scss";
 
 .post {
-        font-family: $font-Avenir-Reg;
-        margin-right: 16px;
-        margin-left: 16px;
-        padding: 16px 0;
-        border-bottom: 1px solid grey;
-        background-color: #fffdfb; 
+  font-family: $font-Avenir-Reg;
+  margin-right: 16px;
+  margin-left: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid grey;
+  background-color: #fffdfb;
 
-    &__details {
-        display: flex;
-        flex-direction: row;
-        justify-content: left;
-       
-        &--name, &--trade, &--comment, &--date, &--rate, &--reviewer {
-            font-size: 1.3rem;
-            font-family: $font-Avenir-Demi;
-            color: #292727cb;
-            margin: 0px 8px 8px 0;
-        }
+  &__details {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
 
-        &--name1, &--trade1, &--comment1, &--date1, &--rate1, &--reviewer1 {
-            font-size: 1.3rem;
-            margin: 0px 8px 8px 0;
-        }
-        &--id {
-            font-size: 1rem;
-            margin: 1.8px 8px 8px 0;
-        }
-
-        &--rating {
-            font-size: 1.1rem;
-            justify-self: right;
-        }
+    &--name,
+    &--trade,
+    &--comment,
+    &--date,
+    &--rate,
+    &--reviewer {
+      font-size: 1.3rem;
+      font-family: $font-Avenir-Demi;
+      color: #292727cb;
+      margin: 0px 8px 8px 0;
     }
+
+    &--name1,
+    &--trade1,
+    &--comment1,
+    &--date1,
+    &--rate1,
+    &--reviewer1 {
+      font-size: 1.3rem;
+      margin: 0px 8px 8px 0;
+    }
+    &--id {
+      font-size: 1rem;
+      margin: 1.8px 8px 8px 0;
+    }
+
+    &--rating {
+      font-size: 1.1rem;
+      justify-self: right;
+    }
+  }
 }

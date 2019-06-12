@@ -1,70 +1,79 @@
-@import '../Variable/Variables.scss';
+@import "../Variable/Variables.scss";
 
 .job__container {
-    
-    font-family: $font-Avenir-Reg;
-    background-color: #fffdfb;
-    padding-bottom: 16px;
+  font-family: $font-Avenir-Reg;
+  background-color: #fffdfb;
+  padding-bottom: 16px;
 }
 
-
-
 .job {
-        margin-right: 16px;
-        margin-left: 16px;
-        padding: 12px 0;
-        border-bottom: 1px solid grey;
-        background-color: #fffdfb;
+  margin-right: 16px;
+  margin-left: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid grey;
+  background-color: #fffdfb;
 
-        &__header {
-                display: flex;
-                font-size: 1.5rem;
-                font-family: $font-Avenir-Demi;
-                justify-content: space-around;
-                border-bottom: 2px solid grey;
-                padding: 16px 0 8px 0;
-                background-color: #fffdfb;
-            }
+  &__header {
+    display: flex;
+    font-size: 1.5rem;
+    font-family: $font-Avenir-Demi;
+    justify-content: space-around;
+    border-bottom: 2px solid grey;
+    padding: 16px 0 8px 0;
+    background-color: #fffdfb;
+  }
 
-    &__database {
-        display: flex;
-        flex-direction: row;
-        justify-content: left;
-        
-       
-        &--name, &--trade, &--city, &--details, &--requestor, &--status, &--date {
-            font-family: $font-Avenir-Demi;
-            font-size: 1rem;
-            font-weight: bold;
-            color: #292727cb;
-            width: 30%;
-            margin: 0px 8px 8px 0;
-        }
+  &__database {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
 
-        &--name1, &--trade1, &--city1,  &--details1, &--requestor1, &--status1, &--date1 {
-            font-size: 1.1rem;
-        }
-
-        &--id {
-            font-size: 1rem;
-            margin: 0.5px 8px 8px 12px;
-        }
-
-        &--rating {
-            font-size: 1.1rem;
-            justify-self: right;
-        }
+    &--name,
+    &--trade,
+    &--city,
+    &--details,
+    &--requestor,
+    &--status,
+    &--date {
+      font-family: $font-Avenir-Demi;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #292727cb;
+      width: 30%;
+      margin: 0px 8px 8px 0;
     }
+
+    &--name1,
+    &--trade1,
+    &--city1,
+    &--details1,
+    &--requestor1,
+    &--status1,
+    &--date1 {
+      font-size: 1.1rem;
+    }
+
+    &--id {
+      font-size: 1rem;
+      margin: 0.5px 8px 8px 12px;
+    }
+
+    &--rating {
+      font-size: 1.1rem;
+      justify-self: right;
+    }
+  }
 }
 
 .request {
-        display: flex;
-        justify-content: space-between;
-        margin: 0.9rem 0 0.1rem 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.9rem 0 0.1rem 0;
 
-        &__form1, &__form2, &__form3 {
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-    
+  &__form1,
+  &__form2,
+  &__form3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
 }

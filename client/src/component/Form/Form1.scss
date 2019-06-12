@@ -1,113 +1,120 @@
-@import '../Variable/Variables.scss';
+@import "../Variable/Variables.scss";
 
 .form {
+  font-family: $font-Avenir-Reg;
+  margin: 0 16px;
 
-    font-family: $font-Avenir-Reg;
-    margin: 0 16px;
-
-    &__image {
+  &__image {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 16px 16px;
 
-        &--title {
-            font-family: $font-Avenir-Demi;
-            font-size: 2rem;
-            margin-left: 36px; 
-            margin-right: 8px;
-        }
-
-        &--phone {
-            width: 15%;
-            height: 90px;     
-        }
+    &--title {
+      font-family: $font-Avenir-Demi;
+      font-size: 2rem;
+      margin-left: 36px;
+      margin-right: 8px;
     }
 
-    &__border {
-        border: 2px solid grey;
-        background-color: white;
-        border-radius: 5px;
-        padding: 16px 16px;
+    &--phone {
+      width: 15%;
+      height: 90px;
     }
+  }
 
-        &__name1, &__service1, &__city1 {
-            font-size: 1.2rem;
-            font-weight: 400;
-            font-family: $font-Avenir-Demi;
-            color: #292727cb;
-            margin-right: 12px;
-        }
+  &__border {
+    border: 2px solid grey;
+    background-color: white;
+    border-radius: 5px;
+    padding: 16px 16px;
+  }
 
-        &__tradeid {
-            font-size: 1rem;
-            margin: 1.8px 0px 8px 8px;
-        }
+  &__name1,
+  &__service1,
+  &__city1 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: $font-Avenir-Demi;
+    color: #292727cb;
+    margin-right: 12px;
+  }
 
-        &__name4, &__desc1,  &__date1, &__status1, &__phoneno1, &__status2 {
-            display: none;
-        }
+  &__tradeid {
+    font-size: 1rem;
+    margin: 1.8px 0px 8px 8px;
+  }
 
-        &__name2, &__service2, &__city2 {
-            font-size: 1.2rem;
-            font-weight: 400;
-        }
+  &__name4,
+  &__desc1,
+  &__date1,
+  &__status1,
+  &__phoneno1,
+  &__status2 {
+    display: none;
+  }
 
-        &__name5 {
-            font-size: 1.1rem;
-            font-weight: 400;
-            padding-left: 3px;
-            width: 70%;
-            height: 25px;
-            border: 1px solid grey;
-            border-radius: 5px;
-            margin: 12px auto;
-        }
+  &__name2,
+  &__service2,
+  &__city2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
 
-        &__phoneno2 {
-            font-size: 1.1rem;
-            font-weight: 400;
-            padding-left: 3px;
-            width: 43%;
-            height: 25px;
-            border: 1px solid grey;
-            border-radius: 5px;
-            margin-top: 12px;
-        }
+  &__name5 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding-left: 3px;
+    width: 70%;
+    height: 25px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin: 12px auto;
+  }
 
-        &__desc2 {
-            display: flex;
-            font-size: 1.1rem;
-            font-weight: 400;
-            padding-left: 3px;
-            width: 97%;
-            height: 100px;
-            border: 1px solid grey;
-            border-radius: 5px;
-            margin-bottom: 16px;
-        }
+  &__phoneno2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding-left: 3px;
+    width: 43%;
+    height: 25px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-top: 12px;
+  }
 
-        &__submit {
-            font-size: 1.1rem;
-            height: 30px;
-            border-radius: 5px;
-            font-family: $font-Avenir-Bold;
-            border: 1px solid grey;
-            background-color: rgb(240, 172, 172);
-        }
+  &__desc2 {
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding-left: 3px;
+    width: 97%;
+    height: 100px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-bottom: 16px;
+  }
 
-    &__notice {
-        font-size: 12px;
-        margin: 48px 0;
-    }
+  &__submit {
+    font-size: 1.1rem;
+    height: 30px;
+    border-radius: 5px;
+    font-family: $font-Avenir-Bold;
+    border: 1px solid grey;
+    background-color: rgb(240, 172, 172);
+  }
 
-    &__city2 {
-      
-        font-size: 1rem;
-        width: 30%;
-        padding: 2px;
-        align-content: center;
-        margin-top: 10px;
-        border: 1px solid grey;
-    }
+  &__notice {
+    font-size: 12px;
+    margin: 48px 0;
+  }
+
+  &__city2 {
+    font-size: 1rem;
+    width: 30%;
+    padding: 2px;
+    align-content: center;
+    margin-top: 10px;
+    border: 1px solid grey;
+  }
 }

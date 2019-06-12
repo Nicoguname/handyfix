@@ -17,13 +17,15 @@ class Navigation extends Component {
             exact
             to="/artisan"
             activeClassName="activenav"
-            className="nav__header--profile">
+            className="nav__header--profile"
+          >
             Profiles
           </NavLink>
           <NavLink
             to="/comments"
             activeClassName="activenav"
-            className="nav__header--request">
+            className="nav__header--request"
+          >
             Reviews
           </NavLink>
         </div>
