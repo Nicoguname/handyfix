@@ -86,7 +86,7 @@ class Form2 extends Component {
     const reviewdate =
       dateToday.getDate() +
       "/" +
-      dateToday.getMonth() +
+      (dateToday.getMonth() + 1) +
       "/" +
       dateToday.getFullYear();
 
