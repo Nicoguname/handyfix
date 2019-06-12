@@ -26,6 +26,7 @@ class Jobs extends Component {
         moment(a.requestdate, "DD-MM-YYYY").unix()
       );
     });
+    
     return jobs;
   }
 
