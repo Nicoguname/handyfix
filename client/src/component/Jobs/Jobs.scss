@@ -17,10 +17,14 @@
     display: flex;
     font-size: 1.5rem;
     font-family: $font-Avenir-Demi;
-    justify-content: space-around;
+    justify-content: left;
     border-bottom: 2px solid grey;
-    padding: 16px 0 8px 0;
+    padding: 16px 0 8px 16px;
     background-color: #fffdfb;
+
+    &--icon {
+      margin: 2px 16px 0 0;
+    }
   }
 
   &__database {
