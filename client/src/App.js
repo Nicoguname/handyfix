@@ -10,6 +10,7 @@ import Jobs from './Component/Jobs/Jobs.js';
 import Artisan from "./Component/Artisan/Artisan.js";
 import JobPage from "./Component/Jobs/JobPage.js";
 import CommentData from "./Component/Comment/CommentData.js";
+const pingUrl = `${process.env.REACT_APP_BACKEND_SERVER || 'http://localhost:8080'}/ping`;
 
 function App() {
 
