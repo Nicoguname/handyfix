@@ -4,7 +4,9 @@
   "description": "BrainStation Capstone Project-2019",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "start:nodemon": "nodemon server.js"
+    
   },
   "repository": {
     "type": "git",
@@ -23,4 +25,5 @@
     "ngrok": "^3.1.1",
     "twilio": "^3.31.1"
   }
+
 }
