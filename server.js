@@ -4,7 +4,7 @@ const commentsRoute = require('./routes/comments-route');
 const jobsRoute = require('./routes/jobs-route');
 const cors = require('cors');
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
 const url = `http://localhost:${port}`;
 
 app.use(express.urlencoded({ extended: false }));
