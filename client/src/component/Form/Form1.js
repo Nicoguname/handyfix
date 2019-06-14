@@ -126,7 +126,7 @@ class Form1 extends Component {
         );
 
         console.log("Response from submitting job request: ", response);
-        this.props.history.push("/home");
+        this.props.history.push("/jobs");
       })
       .catch(error => {
         console.log("Error from server: ", error);

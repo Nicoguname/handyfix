@@ -46,7 +46,7 @@ class Jobs extends Component {
        
               <div className="job__header">
               <div className="job__header--icon">
-              <Link to="/form1"> <img src={Iconback} alt="back-arrow" />
+              <Link to="/artisan"> <img src={Iconback} alt="back-arrow" />
               </Link>
               </div>
           <div className="job__header--title">Job Request Database</div>

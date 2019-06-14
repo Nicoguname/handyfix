@@ -106,7 +106,7 @@ class Form2 extends Component {
         alert("Thank you for the feedback. We value your patronage.");
 
         console.log("Response from submitting job request: ", response);
-        this.props.history.push("/artisan");
+        this.props.history.push("/comments");
       })
       .catch(error => {
         console.log("Error from server: ", error);

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import Hero from "../Hero/Hero.js";
 import Trade from "../Trade/Trade.js";
-import HomeImage from "../../Assets/Images/sven-brandsma-1561542-unsplash.jpg";
+import FooterImage from "../../Assets/Images/sven-brandsma-1561542-unsplash.jpg";
 import "./Home.scss";
 
 export class Home extends Component {
@@ -12,7 +12,7 @@ export class Home extends Component {
         <Hero />
         <Trade />
         <NavLink to="/jobs">
-          <img className="home__image" src={HomeImage} alt="homeiamge" />
+          <img className="home__image" src={FooterImage} alt="homeiamge" />
         </NavLink>
       </div>
     );
